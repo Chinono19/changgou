@@ -16,4 +16,7 @@ public interface UserMapper extends Mapper<User> {
 
     @Select("SELECT * FROM tb_user WHERE mobile = #{phone}")
     User findByPhone(@Param("phone") String phone);
+
+    @Select("SELECT *FROM tb_user WHERE username = #{username}")
+    User userLogin(User user);
 }

@@ -27,5 +27,8 @@ public class User {
     private String face;
     private Integer expriece;
 
+    @Transient //临时数据
+    private String code; //验证码
+
 }
 

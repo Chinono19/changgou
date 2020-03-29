@@ -1,0 +1,126 @@
+<template>
+  <div>
+
+<TopNav> </TopNav>
+<Header> </Header>
+      	<!-- 登录主体部分start -->
+	<div class="login w990 bc mt10">
+		<div class="login_hd">
+			<h2>用户登录</h2>
+			<b></b>
+		</div>
+		<div class="login_bd">
+			<div class="login_form fl">
+				<form action="" method="post">
+					<ul>
+						<li>
+							<label for="">用户名：</label>
+							<input @blur="changeImg" v-model="user.username" type="text" class="txt" name="username" />
+						</li>
+						<li>
+							<label for="">密码：</label>
+							<input v-model="user.password" type="password" class="txt" name="password" />
+							<a href="">忘记密码?</a>
+						</li>
+						<li class="checkcode">
+							<label for="">验证码：</label>
+							<input type="text"  name="checkcode" v-model="user.code"/>
+							<img :src="imgUrl" alt="" />
+							<span>看不清？<a href="" @click.prevent="changeImg">换一张</a></span>
+                              <p class="loginerror">{{msg}}</p>
+						</li>
+                       
+						<li>
+							<label for="">&nbsp;</label>
+							<input type="checkbox" class="chb"  /> 保存登录信息
+						</li>
+						<li>
+							<label for="">&nbsp;</label>
+							<input type="submit" value="" class="login_btn" @click.prevent="loginFn" />
+						</li>
+					</ul>
+				</form>
+               
+
+				<div class="coagent mt15">
+					<dl>
+						<dt>使用合作网站登录商城：</dt>
+						<dd class="qq"><a href=""><span></span>QQ</a></dd>
+						<dd class="weibo"><a href=""><span></span>新浪微博</a></dd>
+						<dd class="yi"><a href=""><span></span>网易</a></dd>
+						<dd class="renren"><a href=""><span></span>人人</a></dd>
+						<dd class="qihu"><a href=""><span></span>奇虎360</a></dd>
+						<dd class=""><a href=""><span></span>百度</a></dd>
+						<dd class="douban"><a href=""><span></span>豆瓣</a></dd>
+					</dl>
+				</div>
+			</div>
+			
+			<div class="guide fl">
+				<h3>还不是商城用户</h3>
+				<p>现在免费注册成为商城用户，便能立刻享受便宜又放心的购物乐趣，心动不如行动，赶紧加入吧!</p>
+
+				<a href="regist.html" class="reg_btn">免费注册 >></a>
+			</div>
+
+		</div>
+	</div>
+	<!-- 登录主体部分end -->
+
+    <Foot></Foot>
+  </div>
+</template>
+
+<script>
+import TopNav from '../components/TopNav'
+import Header from '../components/Header'
+import Foot from '../components/Foot'
+export default {
+    head:{
+        title:"登录",
+        link:[
+            {rel:"stylesheet",href:"/style/login.css"}
+        ]
+    },
+    data() {
+        return {
+            imgUrl:'',
+            user:{
+                username:"",
+                password:"",
+                code:""
+            },
+            msg:""
+        }
+    },
+    components:{
+        TopNav,
+        Header,
+        Foot,
+    },
+    methods: {
+        changeImg(){
+            if(this.user.username){
+                this.imgUrl = 
+                `http://localhost:10010/v3/cgwebservice/verifycode?username=${this.user.username}&time=${new Date().getTime()}`
+            }else{
+                alert("请输入用户名")
+            }
+        },
+        async loginFn(){
+            let {data} = await this.$request.userLogin(this.user);
+            console.warn(data);
+            if(data.code==1){
+                alert("登录成功");
+            }else{
+                this.msg = data.message;
+            }
+            
+        }
+    },
+}
+</script>
+
+<style>
+
+</style>

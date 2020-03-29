@@ -10,7 +10,13 @@ const request = {
     },
     sendSms:(user)=>{
         return axios.post('/cgwebservice/sms/sendSms',user);
-    }
+    },
+    register : ( user ) => {
+        return axios.post('/cgwebservice/user/register' , user )
+      },
+      userLogin:(user)=>{
+        return axios.post('/cgwebservice/user/userLogin' , user )
+      }
 }
 
 var axios = null

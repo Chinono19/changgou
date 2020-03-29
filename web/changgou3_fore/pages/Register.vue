@@ -35,12 +35,12 @@
               </li>
               <li>
                 <label for>密码：</label>
-                <input type="password" class="txt" name="password" />
+                <input type="password" v-model="user.password" class="txt" name="password" />
                 <p>6-20位字符，可使用字母、数字和符号的组合，不建议使用纯数字、纯字母、纯符号</p>
               </li>
               <li>
                 <label for>确认密码：</label>
-                <input type="password" class="txt" name="password" />
+                <input type="password"  v-model="user.repassword"  class="txt" name="password" />
                 <p>请再次输入密码</p>
               </li>
               <li>
@@ -58,11 +58,12 @@
               </li>
               <li class="checkcode">
                 <label for>验证码：</label>
-                <input type="text" name="checkcode" />
+                <input type="text" v-model="user.code" name="checkcode" />
                 <button :disabled="btnDisabled" @click="sendSms">
                   发送验证码
                   <span v-if="btnDisabled">{{seconds}}秒</span>
                 </button>
+                <p class="error">{{userMsg.code.message}}</p>
               </li>
               <li>
                 <label for>&nbsp;</label>
@@ -70,7 +71,7 @@
               </li>
               <li>
                 <label for>&nbsp;</label>
-                <input type="submit" value class="login_btn" />
+                <input type="submit" value @click.prevent="registerFn" class="login_btn" />
               </li>
             </ul>
           </form>
@@ -119,9 +120,10 @@ export default {
         username: "",
         mobile: ""
       },
+      userMsg:{code:''},
       btnDisabled:false,
       seconds:5,
-      timer:null
+      timer:null,
     };
   },
   methods: {
@@ -162,6 +164,15 @@ export default {
 
       let {data}  = await this.$request.sendSms(this.user);
       console.warn(data);
+    },
+    //注册
+    async registerFn(){
+       let {data} = await this.$request.register(this.user);
+       if(data.code ==1){
+         this.$router.push('/Login');
+       }else{
+         this.userMsg.code = data;
+       }
     }
   }
 };
