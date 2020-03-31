@@ -118,6 +118,7 @@ export default {
 				console.warn(mapMutations);
 				this.setData({'key':'user','value':data.other.loginName})
 				localStorage.setItem("loginName",data.other.loginName);
+				localStorage.setItem("token",data.other.token);
             }else{
                 this.msg = data.message;
             }

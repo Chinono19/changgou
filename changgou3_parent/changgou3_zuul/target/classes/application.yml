@@ -32,3 +32,29 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+#自定义配置
+sc:
+  jwt:
+    secret: sc@Login(Auth}*^31)&czxy% # 登录校验的密钥
+    pubKeyPath: D:/rsa/rsa.pub # 公钥地址
+    priKeyPath: D:/rsa/rsa.pri # 私钥地址
+    expire: 360 # 过期时间,单位分钟
+  filter:
+    allowPaths:            #配置一组数据
+      - /checkusername
+      - /checkmobile
+      - /sms
+      - /register
+      - /login
+      - /verifycode
+      - /categorys
+      - /news
+      - /brands
+      - /specifications
+      - /search
+      - /goods
+      - /comments
+      - /userLogin
+      - /checkPhone
+      - /register
+      - /sendSms

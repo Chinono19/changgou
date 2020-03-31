@@ -31,3 +31,10 @@ eureka:
     instance-id: ${eureka.instance.ip-address}.${server.port}
     lease-renewal-interval-in-seconds: 3
     lease-expiration-duration-in-seconds: 10
+#自定义配置
+sc:
+  jwt:
+    secret: sc@Login(Auth}*^31)&czxy% # 登录校验的密钥
+    pubKeyPath: F:/data/rsa/rsa.pub  #公钥地址
+    priKeyPath: F:/data/rsa/rsa.pri  # 私钥地址
+    expire: 360 # 过期时间,单位分钟

@@ -23,5 +23,17 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.chinono.changgou3</groupId>
+            <artifactId>changgou3_common_auth</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.chinono.changgou3</groupId>
+            <artifactId>changgou3_pojo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

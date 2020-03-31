@@ -1,10 +1,12 @@
 package com.chinono.controller;
 
+import com.chinono.config.JwtProperties;
 import com.chinono.mapper.UserMapper;
 import com.chinono.po.User;
 import com.chinono.service.UserService;
 import com.chinono.utils.BCrypt;
 import com.chinono.utils.BaseResult;
+import com.chinono.utils.JwtUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -66,6 +68,10 @@ public class UserController {
         return BaseResult.ok("注册成功");
     }
 
+
+    @Resource
+    private JwtProperties jwtProperties;
+
     @PostMapping("/userLogin")
     public BaseResult userLogin(@RequestBody User user){
         if (StringUtils.isEmpty(user.getUsername())){
@@ -86,8 +92,9 @@ public class UserController {
         if (ruser== null){
             return BaseResult.error("用户不存在");
         }
+        String token = JwtUtils.generateToken(ruser, jwtProperties.getExpire(), jwtProperties.getPrivateKey());
 
-        return BaseResult.ok("登录成功").append("loginName",user.getUsername());
+        return BaseResult.ok("登录成功").append("loginName",user.getUsername()).append("token",token);
     }
 
 

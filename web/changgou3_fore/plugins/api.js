@@ -22,7 +22,12 @@ const request = {
 var axios = null
 
 export default ({$axios,redirect},inject) =>{
+    //sessionStorage获得token
+    let token = localStorage.getItem('token');
 
+    if(token) {
+        $axios.setToken(token);
+    }
     //赋值
     axios = $axios;
 
