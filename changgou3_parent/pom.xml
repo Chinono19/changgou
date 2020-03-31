@@ -15,6 +15,7 @@
         <module>changgou3_pojo</module>
         <module>changgou3_web_service</module>
         <module>changgou3_test</module>
+        <module>changgou3_auth_service</module>
     </modules>
 
     <!-- 1 确定spring boot的版本-->

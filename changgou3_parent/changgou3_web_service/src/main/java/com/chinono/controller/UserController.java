@@ -87,7 +87,7 @@ public class UserController {
             return BaseResult.error("用户不存在");
         }
 
-        return BaseResult.ok("登录成功");
+        return BaseResult.ok("登录成功").append("loginName",user.getUsername());
     }
 
 

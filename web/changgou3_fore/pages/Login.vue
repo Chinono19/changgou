@@ -75,6 +75,8 @@
 import TopNav from '../components/TopNav'
 import Header from '../components/Header'
 import Foot from '../components/Foot'
+
+import {mapMutations} from 'vuex'
 export default {
     head:{
         title:"登录",
@@ -99,6 +101,7 @@ export default {
         Foot,
     },
     methods: {
+		...mapMutations(['setData']),
         changeImg(){
             if(this.user.username){
                 this.imgUrl = 
@@ -111,7 +114,10 @@ export default {
             let {data} = await this.$request.userLogin(this.user);
             console.warn(data);
             if(data.code==1){
-                alert("登录成功");
+				this.$router.push("/Index");
+				console.warn(mapMutations);
+				this.setData({'key':'user','value':data.other.loginName})
+				localStorage.setItem("loginName",data.other.loginName);
             }else{
                 this.msg = data.message;
             }

@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="changgou3_auth_service" />
         <module name="changgou3_common_auth" />
         <module name="changgou3_common_db" />
         <module name="changgou3_eureka" />
@@ -18,6 +19,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="changgou3_auth_service" options="-parameters" />
       <module name="changgou3_common" options="-parameters" />
       <module name="changgou3_common_auth" options="-parameters" />
       <module name="changgou3_common_db" options="-parameters" />
