@@ -1,5 +1,7 @@
 <template>
   	<div class="header w1210 bc mt15">
+
+		  <TopNav> </TopNav>
 		<!-- 头部上半部分 start 包括 logo、搜索、用户中心和购物车结算 -->
 		<div class="logo w1210">
 			<h1 class="fl"><a href="index.html"><img src="images/logo.png" alt="畅购商城"></a></h1>
@@ -86,7 +88,6 @@
 		<!-- 头部上半部分 end -->
 
 		<div style="clear:both;"></div>
-
 		<!-- 导航条部分 start -->
 		<div class="nav w1210 bc mt10">
 			<!--  商品分类部分 start-->
@@ -378,12 +379,17 @@
 			</div>
 		</div>
 		<!-- 导航条部分 end -->
+
+
 	</div>
 </template>
 
 <script>
+import TopNav from '~/components/TopNav'
 export default {
-
+	components:{
+		TopNav,
+	}
 }
 </script>
 

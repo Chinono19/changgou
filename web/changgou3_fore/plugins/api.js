@@ -24,10 +24,15 @@ var axios = null
 export default ({$axios,redirect},inject) =>{
     //sessionStorage获得token
     let token = localStorage.getItem('token');
-
-    if(token) {
+    if(token){
         $axios.setToken(token);
     }
+
+    $axios.onError(error=>{
+        if(error.response.status === 403){
+            redirect('/Login');
+        }
+    })
     //赋值
     axios = $axios;
 

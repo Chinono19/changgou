@@ -1,12 +1,11 @@
 <template>
   <div>
-      <TopNav></TopNav>
+      
 
       <IndexHeader></IndexHeader>
 
 
         <!--  -->
-
 	<div style="clear:both;"></div>
 
 	<!-- 综合区域 start 包括幻灯展示，商城快报 -->
@@ -45,14 +44,7 @@
 			<div class="news mt10">
 				<h2><a href="">更多快报&nbsp;></a><strong>网站快报</strong></h2>
 				<ul>
-					<li class="odd"><a href="">电脑数码双11爆品抢不停</a></li>
-					<li><a href="">买茶叶送武夷山旅游大奖</a></li>
-					<li class="odd"><a href="">爆款手机最高直降1000</a></li>
-					<li><a href="">新鲜褚橙全面包邮开售！</a></li>
-					<li class="odd"><a href="">家具家装全场低至3折</a></li>
-					<li><a href="">买韩束，志玲邀您看电影</a></li>
-					<li class="odd"><a href="">美的先行惠双11快抢悦</a></li>
-					<li><a href="">享生活 疯狂周期购！</a></li>
+					<li :class="{'odd':index % 2 ===0}" v-for="(news,index) in newsList" :key="index"><a href="">{{news.title}}</a></li>
 				</ul>
 
 			</div>
@@ -794,15 +786,16 @@
         <!--  -->
 
 
-    <Foot> </Foot>
+    <IndexFoot> </IndexFoot>
   </div>
 </template>
 
 <script>
-import TopNav from '../components/TopNav'
+
 import IndexHeader from '../components/IndexHeader'
-import Foot from '../components/Foot'
+import IndexFoot from '../components/IndexFoot'
 export default {
+	
     head:{
         title:"首页",
         link:[
@@ -816,16 +809,34 @@ export default {
             {type:"text/javascript",src:"/js/index.js"},
 
         ]
-    },
+	},
+	async created() {
+		let {data} = await this.$request.findAllNews();
+		console.warn(data);
+	},
     components:{
-        TopNav,
         IndexHeader,
-        Foot
-    }
+        IndexFoot,
+	},
+	//--SSR
+	async asyncData({app}){
+		let {data} = await app.$request.findAllNews();
+		console.warn(data);
+		
+		return {newsList:data.data.list}
+	},
+
     
 }
 </script>
 
 <style>
-
+  .news li a {
+    display: block; /* 当前元素本身是inline的，因此需要设置成block模式 */
+    white-space: nowrap; /* 因为设置了block，所以需要设置nowrap来确保不换行 */
+    overflow: hidden; /* 超出隐藏结合width使用截取采用效果*/
+    text-overflow: ellipsis; /* 本功能的主要功臣，超出部分的剪裁方式 */
+    -o-text-overflow: ellipsis; /* 特定浏览器前缀 */
+    text-decoration: none; /* 无用 */
+  }
 </style>

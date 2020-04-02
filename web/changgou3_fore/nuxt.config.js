@@ -29,7 +29,8 @@ export default {
   */
   plugins: [
     //mode 是指运行环境 默认是在nodejs 和 网页都执行 如果写了mode:client 就是指在网页执行
-    {src:"~/plugins/api.js",mode:"client"}
+    {src:"~/plugins/api.js",mode:"client"},
+    {src:"~/plugins/apiserver.js",mode:"service"}
   ],
   /*
   ** Nuxt.js dev-modules

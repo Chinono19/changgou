@@ -3,6 +3,8 @@ server:
   port: 8081
 
 spring:
+  jackson:
+    time-zone: GMT+8
   application:
     name: cgwebservice   #服务名
   datasource:           #数据源配置
