@@ -2,7 +2,7 @@
   <div>
       
 
-      <IndexHeader></IndexHeader>
+      <IndexHeader :list="categoryList"></IndexHeader>
 
 
         <!--  -->
@@ -820,10 +820,15 @@ export default {
 	},
 	//--SSR
 	async asyncData({app}){
-		let {data} = await app.$request.findAllNews();
-		console.warn(data);
+		let [{data:newData} , {data:categoryData}] = 
+		await Promise.all([app.$request.findAllNews(),app.$request.findAllCategory()]);
 		
-		return {newsList:data.data.list}
+		let clist = categoryData.data;
+		clist = clist.slice(0,13);
+		
+		return {newsList:newData.data.list,
+		categoryList:clist
+		}
 	},
 
     

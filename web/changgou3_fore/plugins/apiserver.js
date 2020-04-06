@@ -8,6 +8,10 @@ const request = {
             }
         })
     },
+    findAllCategory:()=>{
+        return axios.get('/cgwebservice/categorys/findAll')
+    },
+    
 
 }
 

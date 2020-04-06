@@ -20,7 +20,7 @@ public class CategoryService {
 
     public List<Category> findAll(){
         Example example = new Example(Category.class);
-        example.setOrderByClause(" parentId asc ");
+        example.setOrderByClause(" parent_id asc ");
         List<Category> categoryList = categoryMapper.selectByExample(example);
 
         List<Category> returnList = new ArrayList<>();
