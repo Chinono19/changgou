@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.Date;
 
+/**
+ * Created by chinono
+ * Data 2020.03.10
+ * email:2401691738@qq.com
+ */
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -23,6 +28,11 @@ public class UserController {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    /**
+     *检测用户名
+     * @param user
+     * @return
+     */
     @PostMapping("/checkusername")
     public BaseResult checkUsername(@RequestBody User user){
         //查询
@@ -35,6 +45,11 @@ public class UserController {
 
     }
 
+    /**
+     * 检测手机号
+     * @param phone
+     * @return
+     */
     @PostMapping("/checkPhone")
     public BaseResult checkPhone(@RequestParam(name="phone")String phone){
         User user  = userService.findByPhone(phone);
@@ -45,6 +60,11 @@ public class UserController {
         }
     }
 
+    /**
+     * 注册
+     * @param user 用户对象
+     * @return
+     */
     @PostMapping("/register")
     public BaseResult register(@RequestBody User user){
         User finUser = userService.findByUsername(user.getUsername());
@@ -72,6 +92,11 @@ public class UserController {
     @Resource
     private JwtProperties jwtProperties;
 
+    /**
+     * 用户登录
+     * @param user 登录的用户名
+     * @return
+     */
     @PostMapping("/userLogin")
     public BaseResult userLogin(@RequestBody User user){
         if (StringUtils.isEmpty(user.getUsername())){

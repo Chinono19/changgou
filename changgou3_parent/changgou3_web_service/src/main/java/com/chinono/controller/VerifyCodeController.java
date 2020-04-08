@@ -17,15 +17,23 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by liangtong.
+ * Created by chinono
+ * Data 2020.03.10
+ * email:2401691738@qq.com
  */
-@Controller         //不能使用 @RestController
+@Controller
 @RequestMapping("/verifycode")
 public class VerifyCodeController {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    /**
+     * 用于生产随机的验证码
+     * @param username 用户名
+     * @param response 响应对象
+     * @throws IOException
+     */
     @GetMapping
     public void verifyCode(@RequestParam(name = "username") String username, HttpServletResponse response) throws IOException {
         //1 生产验证码

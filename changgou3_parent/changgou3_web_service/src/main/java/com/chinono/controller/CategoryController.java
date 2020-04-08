@@ -17,6 +17,7 @@ public class CategoryController {
     @Resource
     private CategoryService categoryService;
 
+
     @GetMapping("/findAll")
     public BaseResult findAll(){
         List<Category> list = categoryService.findAll();

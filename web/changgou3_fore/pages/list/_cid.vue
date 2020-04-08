@@ -156,61 +156,32 @@
 				<div class="filter_wrap">
 					<dl>
 						<dt>品牌：</dt>
-						<dd class="cur"><a href="">不限</a></dd>
-						<dd><a href="">联想（ThinkPad）</a></dd>
-						<dd><a href="">联想（Lenovo）</a></dd>
-						<dd><a href="">宏碁（acer）</a></dd>
-						<dd><a href="">华硕（ASUS）</a></dd>
-						<dd><a href="">戴尔（DELL）</a></dd>
-						<dd><a href="">索尼（SONY）</a></dd>
-						<dd><a href="">惠普（HP）</a></dd>
-						<dd><a href="">三星（SAMSUNG）</a></dd>
-						<dd><a href="">优派（ViewSonic）</a></dd>
-						<dd><a href="">苹果（Apple）</a></dd>
-						<dd><a href="">富士通（Fujitsu）</a></dd>
-					</dl>
+						<dd :class="{'cur':searchMap.brandId == ''}" ><a href="">不限</a></dd>
+						<dd :class="{'cur':searchMap.brandId == brand.id}" v-for="(brand,index) in brandList" :key="index">
+							<a href="" @click.prevent="brandSearch(brand.id)">{{brand.brandName}}</a>
+						</dd>
 
-					<dl>
-						<dt>价格：</dt>
-						<dd class="cur"><a href="">不限</a></dd>
-						<dd><a href="">1000-1999</a></dd>
-						<dd><a href="">2000-2999</a></dd>
-						<dd><a href="">3000-3499</a></dd>
-						<dd><a href="">3500-3999</a></dd>
-						<dd><a href="">4000-4499</a></dd>
-						<dd><a href="">4500-4999</a></dd>
-						<dd><a href="">5000-5999</a></dd>
-						<dd><a href="">6000-6999</a></dd>
-						<dd><a href="">7000-7999</a></dd>
 					</dl>
+					<!-- 规格 start  -->
+					<dl v-for="(spec,index) in specList" :key="index">
+						<dt>{{spec.specName}}</dt>
+						<dd class="cur"><a href="" @click.prevent="specSearch(spec.specName,null,$event)">不限</a></dd>
+						<dd v-for="(opt,indexOpt) in spec.options" :key="indexOpt">
+							<a href="" @click.prevent="specSearch(spec.specName,opt.optionName,$event)">{{opt.optionName}}</a>
+						</dd>
+					</dl>
+					<!-- 规格end  -->
 
-					<dl>
-						<dt>尺寸：</dt>
-						<dd class="cur"><a href="">不限</a></dd>
-						<dd><a href="">10.1英寸及以下</a></dd>
-						<dd><a href="">11英寸</a></dd>
-						<dd><a href="">12英寸</a></dd>
-						<dd><a href="">13英寸</a></dd>
-						<dd><a href="">14英寸</a></dd>
-						<dd><a href="">15英寸</a></dd>
-					</dl>
 
-					<dl class="last">
-						<dt>处理器：</dt>
-						<dd class="cur"><a href="">不限</a></dd>
-						<dd><a href="">intel i3</a></dd>
-						<dd><a href="">intel i5</a></dd>
-						<dd><a href="">intel i7</a></dd>
-						<dd><a href="">AMD A6</a></dd>
-						<dd><a href="">AMD A8</a></dd>
-						<dd><a href="">AMD A10</a></dd>
-						<dd><a href="">其它intel平台</a></dd>
-					</dl>
+					
 				</div>
 			</div>
 			<!-- 商品筛选 end -->
+
+		
 			
 			<div style="clear:both;"></div>
+
 
 			<!-- 排序 start -->
 			<div class="sort mt10">
@@ -223,6 +194,10 @@
 				</dl>
 			</div>
 			<!-- 排序 end -->
+
+
+	
+			
 			
 			<div style="clear:both;"></div>
 
@@ -338,7 +313,41 @@ export default {
 			categoryList:data.data
 		}
 
-	}
+	},
+	created() {
+		this.searchMap.catId = this.$route.params.cid;
+		this.findBrandByCidFN();
+		this.findSpecFN();
+	},
+	data() {
+		return {
+			searchMap:{
+				catId:"",
+				brandId:"" //品牌id
+			},
+			brandList:[],
+			specList: [],    //规格列表
+		}
+	},
+	methods: {
+		async findBrandByCidFN(){
+			let {data} = await this.$request.findBrandByCid(this.searchMap.catId);
+			this.brandList = data.data;
+			console.warn(data);
+		},
+		brandSearch(brandId){
+			this.searchMap.brandId = brandId;
+		},
+		async findSpecFN(){
+			let {data:specData} = await  this.$request.findSpec(this.searchMap.catId)
+			this.specList = specData.data;
+		},
+		// 规格的切换
+		specSearch(specName,optionName,e){
+			$(e.target).parent().addClass("cur");
+			$(e.target).parent().siblings().removeClass("cur")
+		}
+	},
 }
 </script>
 

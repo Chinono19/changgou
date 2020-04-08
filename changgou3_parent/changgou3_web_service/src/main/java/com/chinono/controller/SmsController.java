@@ -16,6 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Created by chinono
+ * Data 2020.03.10
+ * email:2401691738@qq.com
+ */
 @RestController
 @RequestMapping("/sms")
 public class SmsController {
@@ -23,6 +28,11 @@ public class SmsController {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    /**
+     * 发送短信验证码
+     * @param user 用户对象
+     * @return
+     */
     @PostMapping("/sendSms")
     public BaseResult sendSms(@RequestBody User user){
         String randomStr = RandomStringUtils.randomNumeric(4);

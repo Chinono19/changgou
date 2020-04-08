@@ -11,7 +11,12 @@ const request = {
     findAllCategory:()=>{
         return axios.get('/cgwebservice/categorys/findAll')
     },
-    
+    findBrandByCid:(cid)=>{
+        return axios.get('/cgwebservice/brands/category/'+ cid)
+    },
+    findSpec: (categoryId) =>{
+        return axios.get("/cgwebservice/specifications/category/"+categoryId);
+    }
 
 }
 

@@ -13,10 +13,12 @@ const request = {
     },
     register : ( user ) => {
         return axios.post('/cgwebservice/user/register' , user )
-      },
-      userLogin:(user)=>{
+    },
+    userLogin:(user)=>{
         return axios.post('/cgwebservice/user/userLogin' , user )
-      }
+    }
+
+
 }
 
 var axios = null
