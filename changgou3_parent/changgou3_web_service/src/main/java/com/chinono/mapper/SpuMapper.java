@@ -29,7 +29,7 @@ public interface SpuMapper extends Mapper<Spu> {
             @Result(property = "specList", column = "spec_list"),
             @Result(property = "createdAt", column = "created_at"),
             @Result(property = "updatedAt", column = "updated_at"),
-            @Result(property = "brand", one = @One(select="com.czxy.changgou3.mapper.BrandMapper.selectByPrimaryKey") , column = "brand_id"),
+            @Result(property = "brand", one = @One(select="com.chinono.mapper.BrandMapper.selectByPrimaryKey") , column = "brand_id"),
     })
     public Spu findById(@Param("spuId") Integer spuId);
 

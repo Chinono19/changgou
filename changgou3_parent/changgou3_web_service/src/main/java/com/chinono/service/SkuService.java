@@ -5,6 +5,7 @@ import com.chinono.mapper.SkuCommontMapper;
 import com.chinono.mapper.SkuMapper;
 import com.chinono.po.Sku;
 import com.chinono.vo.ESData;
+import com.chinono.vo.SearchSku;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,14 +28,14 @@ public class SkuService {
      * 查询所有的sku
      * @return
      */
-   public List<ESData> findSku(){
+   public List<SearchSku> findSku(){
        List<Sku> list = skuMapper.findAllSku();
 
        //数据封装
-       ArrayList<ESData> returnList = new ArrayList<>();
+       ArrayList<SearchSku> returnList = new ArrayList<>();
        for (Sku sku : list) {
            //1)创建ESData
-           ESData esData = new ESData();
+           SearchSku esData = new SearchSku();
            // 2) 依次封装数据
            esData.setId( sku.getId() );
            esData.setLogo( sku.getSpu().getLogo() );

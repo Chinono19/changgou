@@ -21,7 +21,7 @@ public interface SkuMapper extends Mapper<Sku> {
             @Result(property = "price", column = "price"),
             @Result(property = "specInfoIdList", column = "spec_info_id_list"),
             @Result(property = "specInfoIdTxt", column = "spec_info_id_txt"),
-            @Result(property = "spu", one = @One(select = "com.czxy.changgou3.mapper.SpuMapper.findById"),  column = "spu_id")
+            @Result(property = "spu", one = @One(select = "com.chinono.mapper.SpuMapper.findById"), column = "spu_id")
     })
     public List<Sku> findAllSku();
 }

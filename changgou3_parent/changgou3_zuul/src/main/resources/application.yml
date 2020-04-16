@@ -58,3 +58,4 @@ sc:
       - /checkPhone
       - /register
       - /sendSms
+      - /sku/esData

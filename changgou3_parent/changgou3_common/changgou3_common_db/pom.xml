@@ -14,8 +14,9 @@
     <dependencies>
         <!--通用公共项目-->
         <dependency>
-            <groupId>com.czxy.changgou3</groupId>
-            <artifactId>changgou3_common_java78</artifactId>
+            <groupId>com.chinono.changgou3</groupId>
+            <artifactId>changgou3_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- mybatis启动器 -->
         <dependency>

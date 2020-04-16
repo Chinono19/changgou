@@ -14,6 +14,7 @@
         <module name="changgou3_test" />
         <module name="changgou3_web_service" />
         <module name="changgou3_zuul" />
+        <module name="changgou_search_service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -29,6 +30,7 @@
       <module name="changgou3_test" options="-parameters" />
       <module name="changgou3_web_service" options="-parameters" />
       <module name="changgou3_zuul" options="-parameters" />
+      <module name="changgou_search_service" options="-parameters" />
     </option>
   </component>
 </project>
