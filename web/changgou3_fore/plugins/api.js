@@ -17,8 +17,6 @@ const request = {
     userLogin:(user)=>{
         return axios.post('/cgwebservice/user/userLogin' , user )
     }
-
-
 }
 
 var axios = null

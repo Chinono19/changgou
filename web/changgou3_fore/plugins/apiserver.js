@@ -16,6 +16,9 @@ const request = {
     },
     findSpec: (categoryId) =>{
         return axios.get("/cgwebservice/specifications/category/"+categoryId);
+    },
+    search: ( params ) => {
+        return axios.post('/cgsearchservice/sku/search', params)
     }
 
 }

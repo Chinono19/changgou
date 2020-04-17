@@ -40,6 +40,7 @@ public class TestSkuFeign {
     private ElasticsearchTemplate elasticsearchTemplate;
     @Test
     public void demo02(){
+        elasticsearchTemplate.deleteIndex(SearchSku.class);
         //构建索引
         elasticsearchTemplate.createIndex(SearchSku.class);
         elasticsearchTemplate.putMapping(SearchSku.class);
@@ -97,12 +98,8 @@ public class TestSkuFeign {
         boolQueryBuilder.must( QueryBuilders.termQuery("brandId", 15127));
 
         queryBuilder.withQuery(boolQueryBuilder);
-
-
         //2 查询
         Page<SearchSku> page = skuRepository.search(queryBuilder.build());
-
-
         //3 展示结果
         System.out.println("总条数：" + page.getTotalElements());
         for(SearchSku searchSku : page.getContent()){
