@@ -7,5 +7,10 @@ export const mutations = {
     }
   }
 
+export const state = ()=>({
+  user:null,
+  keyword:null
+})
+
   //外部调用
 // this.$store.commit('setUser', 'xxx' )

@@ -8,7 +8,6 @@ import org.apache.commons.lang.StringUtils;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.sort.FieldSortBuilder;
-import org.elasticsearch.search.sort.SortBuilder;
 import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.data.domain.Page;
@@ -116,7 +115,9 @@ public class SkuSearchService {
         if (searchVo.getSpecList()!=null){
             for (String key : searchVo.getSpecList().keySet()) {
                 String value = searchVo.getSpecList().get(key);
-                boolQueryBuilder.must(QueryBuilders.termQuery("specs."+key+".keyword",value));
+                if(!"".equals(value)){
+                    boolQueryBuilder.must(QueryBuilders.termQuery("specs."+key+".keyword",value));
+                }
             }
         }
         //价格区间

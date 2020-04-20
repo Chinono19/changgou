@@ -304,19 +304,32 @@
         <div class="sort mt10">
           <dl>
             <dt>排序：</dt>
-            <dd class="cur">
-              <a href>销量</a>
+            <dd :class="{'cur':this.searchMap.sortBy == 'xl'}">
+              <a href @click.prevent="sortSearch('xl')">销量</a>
             </dd>
-            <dd>
-              <a href>价格</a>
+            <dd :class="{'cur':this.searchMap.sortBy == 'jg'}">
+              <a href @click.prevent="sortSearch('jg')">
+                价格
+                <span
+                  v-if="this.searchMap.sortBy=='jg' 
+                && this.searchMap.sortWay=='asc'"
+                >↑</span>
+                <span
+                  v-if="this.searchMap.sortBy=='jg' 
+                && this.searchMap.sortWay=='desc'"
+                >↓</span>
+              </a>
             </dd>
-            <dd>
-              <a href>评论数</a>
+            <dd :class="{'cur':this.searchMap.sortBy == 'pl'}">
+              <a href @click.prevent="sortSearch('pl')">评论数</a>
             </dd>
-            <dd>
-              <a href>上架时间</a>
+            <dd :class="{'cur':this.searchMap.sortBy == 'sj'}">
+              <a href @click.prevent="sortSearch('sj')">上架时间</a>
             </dd>
           </dl>
+          <input type="text" style="width:80px" v-model="searchMap.minPrice" /> -
+          <input type="text" style="width:80px" v-model="searchMap.maxPrice" />
+          <input type="button" value="查询" @click="searchList" />
         </div>
         <!-- 排序 end -->
 
@@ -345,14 +358,13 @@
                 </dd>
               </dl>
             </li>
-
           </ul>
         </div>
         <!-- 商品列表 end-->
 
         <!-- 分页信息 start -->
         <div class="page mt20">
-          <a href>首页</a>
+          <!-- <a href>首页</a>
           <a href>上一页</a>
           <a href>1</a>
           <a href>2</a>
@@ -367,7 +379,11 @@
               <input type="text" class="page_num" value="3" /> 页
             </em>
             <a href="#" class="skipsearch">确定</a>
-          </span>
+          </span> -->
+        <Pagination :total="searchResult.count"
+  :page_size="searchMap.pageSize"
+  @page_changed="pageChanged">
+</Pagination>
         </div>
         <!-- 分页信息 end -->
       </div>
@@ -384,6 +400,7 @@
 import IndexHeader from "~/components/IndexHeader";
 import Foot from "~/components/Foot.vue";
 import Bottomnav from "~/components/Bottomnav";
+import Pagination from '~/components/Pagination'
 
 export default {
   head: {
@@ -401,7 +418,8 @@ export default {
   components: {
     IndexHeader,
     Foot,
-    Bottomnav
+    Bottomnav,
+    Pagination
   },
 
   //---
@@ -414,9 +432,9 @@ export default {
   created() {
     this.searchMap.catId = this.$route.params.cid;
     this.findBrandByCidFN();
-	this.findSpecFN();
-	//查询搜索数据
-	this.searchList();
+    this.findSpecFN();
+    //查询搜索数据
+    this.searchList();
   },
   data() {
     return {
@@ -424,11 +442,15 @@ export default {
         catId: "",
         brandId: "", //品牌id
         pageNum: 1, //第几页
-        pageSize: 10 //每页个数
+        pageSize: 2, //每页个数
+        specList: {
+          机身颜色: "",
+          内存: ""
+        }
       },
       brandList: [],
-	  specList: [], //规格列表
-	 searchResult: {}  //查询结果
+      specList: [], //规格列表
+      searchResult: {} //查询结果
     };
   },
   methods: {
@@ -448,6 +470,17 @@ export default {
     },
     // 规格的切换
     specSearch(specName, optionName, e) {
+      //通过“规格项名称”来判断是否为“不限”
+      if (optionName) {
+        //规格项
+        this.searchMap.specList[specName] = optionName;
+      } else {
+        //不限--删
+        delete this.searchMap.specList[specName];
+      }
+
+      //查询所有
+      this.searchList();
       $(e.target)
         .parent()
         .addClass("cur");
@@ -455,27 +488,59 @@ export default {
         .parent()
         .siblings()
         .removeClass("cur");
-	},
-	//搜索商品
-	async searchList(){
-		//查询
-		let {data} = await this.$request.search(this.searchMap);
-		//保存查询的结果
-		this.searchResult = data.data;
-		console.warn(this.searchResult);
-		
-	}
+    },
+    //搜索商品
+    async searchList() {
+      //查询
+      let { data } = await this.$request.search(this.searchMap);
+      //保存查询的结果
+      this.searchResult = data.data;
+      console.warn(this.searchResult);
+    },
+    //根据品牌查询
+    brandSearch(brandId) {
+      this.searchMap.brandId = brandId;
+      this.searchList();
+    },
+    //根据评论排序
+    sortSearch(sortBy) {
+      //判断是否连续点击
+      if (this.searchMap.sortBy == sortBy) {
+        //如果是练习点击 切换排序方式
+        this.searchMap.sortWay =
+          this.searchMap.sortWay == "asc" ? "desc" : "asc";
+      } else {
+        //如果不是切换排序字段
+        this.searchMap.sortBy = sortBy;
+        this.searchMap.sortWay = "asc";
+      }
+      this.searchList();
+    },
+    //分页的回调函数
+      pageChanged( pageNum ) {
+      //查询第几页数据
+      //1) 设置当前页
+      this.searchMap.pageNum = pageNum
+      //2) 查询
+      this.searchList()
+    }
+  },
+  watch: {
+    "$store.state.keyword": function(newValue, oldValue) {
+      this.searchMap.keyword = newValue;
+      this.searchList();
+    }
   }
 };
 </script>
 
 <style>
-  .goodslist .goodsname {
-    display: block; /* 当前元素本身是inline的，因此需要设置成block模式 */
-    white-space: nowrap; /* 因为设置了block，所以需要设置nowrap来确保不换行 */
-    overflow: hidden; /* 超出隐藏结合width使用截取采用效果*/
-    text-overflow: ellipsis; /* 本功能的主要功臣，超出部分的剪裁方式 */
-    -o-text-overflow: ellipsis; /* 特定浏览器前缀 */
-    text-decoration: none; /* 无用 */
-  }
+.goodslist .goodsname {
+  display: block; /* 当前元素本身是inline的，因此需要设置成block模式 */
+  white-space: nowrap; /* 因为设置了block，所以需要设置nowrap来确保不换行 */
+  overflow: hidden; /* 超出隐藏结合width使用截取采用效果*/
+  text-overflow: ellipsis; /* 本功能的主要功臣，超出部分的剪裁方式 */
+  -o-text-overflow: ellipsis; /* 特定浏览器前缀 */
+  text-decoration: none; /* 无用 */
+}
 </style>

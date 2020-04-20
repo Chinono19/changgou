@@ -10,7 +10,8 @@
 				<div class="search_form">
 					<div class="form_left fl"></div>
 					<form action="" name="serarch" method="get" class="fl">
-						<input type="text" class="txt" value="请输入商品关键字" /><input type="submit" class="btn" value="搜索" />
+						<input type="text" class="txt" v-model="keyword" placeholder="请输入商品关键字" />
+						<input type="submit" class="btn" value="搜索" @click.prevent="search" />
 					</form>
 					<div class="form_right fl"></div>
 				</div>
@@ -139,6 +140,8 @@
 
 <script>
 import TopNav from '~/components/TopNav'
+
+import {mapMutations} from 'vuex' 
 export default {
 	props:{
 		list:{
@@ -148,11 +151,18 @@ export default {
 		isFirst:{ 
 			type:Boolean,
 			default:true
-		}
+		},
+		keyword:"",//关键字
 	},
 	components:{
 		TopNav,
-	}
+	},
+	methods: {
+		...mapMutations(['setData']),
+		search(){
+			this.setData({'key':'keyword','value':this.keyword})
+		}
+	},
 }
 </script>
 
