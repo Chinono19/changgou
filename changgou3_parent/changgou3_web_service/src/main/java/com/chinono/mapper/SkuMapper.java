@@ -1,10 +1,7 @@
 package com.chinono.mapper;
 
 import com.chinono.po.Sku;
-import org.apache.ibatis.annotations.One;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
@@ -12,7 +9,7 @@ import java.util.List;
 @org.apache.ibatis.annotations.Mapper
 public interface SkuMapper extends Mapper<Sku> {
     @Select("select * from tb_sku")
-    @Results({
+    @Results(id = "skuResult",value = {
             @Result(property = "id", column = "id"),
             @Result(property = "stock", column = "stock"),
             @Result(property = "spuId", column = "spu_id"),
@@ -24,4 +21,13 @@ public interface SkuMapper extends Mapper<Sku> {
             @Result(property = "spu", one = @One(select = "com.chinono.mapper.SpuMapper.findById"), column = "spu_id")
     })
     public List<Sku> findAllSku();
+
+    /**
+     * 查询spu对应的所有sku
+     * @param spuId
+     * @return
+     */
+    @Select("SELECT * FROM tb_sku WHERE spu_id = #{spuId}")
+    @ResultMap("skuResult")
+    public List<Sku> findSkuBySpuId(@Param("spuId") Integer spuId);
 }

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d31bfdde-e099-47c8-8363-c530e913886b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,10 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/controller/SkuSearchController.java">
+        <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+            <state relative-caret-position="317">
+              <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,22 +37,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/feign/SkuFeign.java">
+        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/SkuPhoto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/OneSkuResult.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/repository/SkuRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,10 +61,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java">
+        <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuPhotoMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+            <state relative-caret-position="299">
+              <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,8 +134,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -146,9 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Category.java" />
-        <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/CategoryMapper.java" />
-        <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/CategoryService.java" />
         <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Brand.java" />
         <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/BrandMapper.java" />
         <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/BrandService.java" />
@@ -197,6 +193,9 @@
         <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/vo/ReturnSku.java" />
         <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/controller/SkuSearchController.java" />
         <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java" />
+        <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/SkuPhoto.java" />
+        <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/OneSkuResult.java" />
+        <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuPhotoMapper.java" />
       </list>
     </option>
   </component>
@@ -223,8 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,15 +254,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -315,16 +303,6 @@
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
               <item name="changgou3_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -356,44 +334,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chinono" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="povo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -413,15 +353,6 @@
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
               <item name="changgou3_web_service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -453,26 +384,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chinono" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_web_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_web_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -487,24 +398,6 @@
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_web_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_web_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
               <item name="changgou3_zuul" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -540,34 +433,6 @@
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
               <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -599,64 +464,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chinono" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="feign" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -672,20 +479,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chinono" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -695,7 +495,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587384637849" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587467590242" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -806,9 +606,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CGSearchServiceApplication" />
-        <item itemvalue="Spring Boot.CGWebServiceApplication" />
         <item itemvalue="Spring Boot.CGZuulApplication" />
+        <item itemvalue="Spring Boot.CGWebServiceApplication" />
+        <item itemvalue="Spring Boot.CGSearchServiceApplication" />
         <item itemvalue="Spring Boot.CGEurekaApplication" />
         <item itemvalue="JUnit.TestSkuFeign.demo03" />
       </list>
@@ -846,7 +646,8 @@
       <workItem from="1587039626040" duration="611000" />
       <workItem from="1587109704700" duration="3837000" />
       <workItem from="1587341813889" duration="1291000" />
-      <workItem from="1587370026711" duration="1443000" />
+      <workItem from="1587370026711" duration="1683000" />
+      <workItem from="1587452490577" duration="2778000" />
     </task>
     <servers />
   </component>
@@ -883,12 +684,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76574000" />
+    <option name="totallyTimeSpent" value="79592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20107238" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -903,15 +705,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" weight="0.28611898" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49865952" visible="true" weight="0.28611898" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49865952" visible="true" weight="0.28470254" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -928,27 +730,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/changgou3_zuul/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_auth_service/src/main/java/com/chinono/CGAuthServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_auth_service/src/main/java/com/chinono/out/UserFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Sku.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -1293,6 +1074,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_eureka/src/main/java/com/chinono/CGEurekaApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_zuul/src/main/java/com/chinono/CGZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1324,24 +1119,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_eureka/src/main/java/com/chinono/CGEurekaApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_zuul/src/main/java/com/chinono/CGZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+        <state relative-caret-position="317">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/SkuPhoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/OneSkuResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuPhotoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

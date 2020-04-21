@@ -14,4 +14,23 @@ public interface SkuCommontMapper extends Mapper<SkuComment> {
      */
     @Select("select count(*) from tb_sku_comment where spu_id = #{spuId}")
     public Integer findNumBySpuId(@Param("spuId") Integer spuId);
+
+
+    /**
+     * 查询指定skuId评论数（当前商品的评论数）
+     * @param skuId
+     * @return
+     */
+    @Select("select count(*) from tb_sku_comment where sku_id = #{skuId}")
+    public Integer findNumBySkuId(@Param("skuId") Integer skuId);
+
+
+    /**
+     * 通过skuId查询评论级别（求平均数）
+     * @param skuId
+     * @return
+     */
+    @Select("SELECT AVG(star) FROM tb_sku_comment WHERE sku_id = #{skuId}")
+    public Double findAvgStarBySkuId(@Param("skuId") Integer skuId);
+
 }
