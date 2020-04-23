@@ -19,6 +19,10 @@ const request = {
     },
     search: ( params ) => {
         return axios.post('/cgsearchservice/sku/search', params)
+    },
+    //查询详情
+    getGoodsInfo:(skuId)=>{
+        return axios.get('cgwebservice/sku/goods/'+skuId);
     }
 
 }

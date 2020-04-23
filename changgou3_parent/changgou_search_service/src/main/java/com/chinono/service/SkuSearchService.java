@@ -156,6 +156,7 @@ public class SkuSearchService {
         for (SearchSku searchSku : page.getContent()) {
             ReturnSku returnSku = new ReturnSku();
             // 2) 封装数据
+            returnSku.setId(searchSku.getId());
             returnSku.setGoodsName(searchSku.getSkuName());
             returnSku.setPrice(searchSku.getPrice());
             returnSku.setMidlogo(searchSku.getLogo());

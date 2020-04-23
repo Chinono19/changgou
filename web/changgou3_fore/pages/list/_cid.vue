@@ -346,7 +346,7 @@
                   </a>
                 </dt>
                 <dd>
-                  <a href class="goodsname">{{sku.goodsName}}</a>
+                  <a :href="'/Goods?id='+sku.id" class="goodsname">{{sku.goodsName}}</a>
                 </dd>
                 <dd>
                   <strong>￥{{sku.price}}</strong>

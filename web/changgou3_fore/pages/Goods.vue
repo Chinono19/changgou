@@ -11,7 +11,12 @@
 	<div class="main w1210 mt10 bc">
 		<!-- 面包屑导航 start -->
 		<div class="breadcrumb">
-			<h2>当前位置：<a href="">首页</a> > <a href="">电脑、办公</a> > <a href="">笔记本</a> > ThinkPad X230(23063T4）12.5英寸笔记本</h2>
+			<h2>当前位置：
+				<a href="">{{goodsInfo.cat1_info.catName}}</a> >
+				 <a href="">{{goodsInfo.cat2_info.catName}}</a> > 
+				 <a href="">{{goodsInfo.cat3_info.catName}}</a> >
+				  {{goodsInfo.goods_name}}
+				  </h2>
 		</div>
 		<!-- 面包屑导航 end -->
 		
@@ -137,8 +142,8 @@
 				<!-- 图片预览区域 start -->
 				<div class="preview fl">
 					<div class="midpic">
-						<a href="images/preview_l1.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-							<img src="images/preview_m1.jpg" alt="" />               <!-- 第一幅图片的中图 -->
+						<a :href="goodsInfo.logo.xbiglogo" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+							<img :src="goodsInfo.logo.biglogo" alt="" />               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>
 	
@@ -150,45 +155,10 @@
 						<div class="smallpic_wrap">
 							<ul>
 								<li class="cur">
-									<a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'images/preview_m1.jpg',largeimage: 'images/preview_l1.jpg'}"><img src="images/preview_s1.jpg"></a>
+									<a class="zoomThumbActive" href="javascript:void(0);" :rel="{gallery: 'gal1', smallimage: '${goodsInfo.logo.smlogo}',largeimage: '${goodsInfo.logo.xbiglogo}'}"><img :src="goodsInfo.logo.biglogo"></a>
 								</li>
-								<li>
-									<a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'images/preview_m2.jpg',largeimage: 'images/preview_l2.jpg'}"><img src="images/preview_s2.jpg"></a>
-								</li>
-								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: 'images/preview_m3.jpg',largeimage: 'images/preview_l3.jpg'}">  
-	    							<img src="images/preview_s3.jpg"></a>
-								</li>
-								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: 'images/preview_m4.jpg',largeimage: 'images/preview_l4.jpg'}">  
-	    							<img src="images/preview_s4.jpg"></a>
-								</li>
-								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: 'images/preview_m5.jpg',largeimage: 'images/preview_l5.jpg'}">  
-	    							<img src="images/preview_s5.jpg"></a>
-								</li>
-								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: 'images/preview_m6.jpg',largeimage: 'images/preview_l6.jpg'}">  
-	    							<img src="images/preview_s6.jpg"></a>
-								</li>
-								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: 'images/preview_m7.jpg',largeimage: 'images/preview_l7.jpg'}">  
-	    							<img src="images/preview_s7.jpg"></a>
-								</li>
-								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: 'images/preview_m8.jpg',largeimage: 'images/preview_l8.jpg'}">  
-	    							<img src="images/preview_s8.jpg"></a>
-								</li>
-								<li>
-									<a href="javascript:void(0);" 
-									rel="{gallery: 'gal1', smallimage: 'images/preview_m9.jpg',largeimage: 'images/preview_l9.jpg'}">  
-	    							<img src="images/preview_s9.jpg"></a>
+								<li v-for="(p,index) in goodsInfo.photos" :key="index">
+									<a href="javascript:void(0);" :rel="{gallery: 'gal1', smallimage: '${p.sming}',largeimage: '${p.xbigimg}'}"><img :src="p.bigimg"></a>
 								</li>
 							</ul>
 						</div>
@@ -200,59 +170,34 @@
 				<!-- 商品基本信息区域 start -->
 				<div class="goodsinfo fl ml10">
 					<ul>
-						<li><span>商品编号： </span>971344</li>
-						<li class="market_price"><span>定价：</span><em>￥6399.00</em></li>
-						<li class="shop_price"><span>本店价：</span> <strong>￥6299.00</strong> <a href="">(降价通知)</a></li>
-						<li><span>上架时间：</span>2012-09-12</li>
-						<li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
+						<li><span>商品编号： </span>{{goodsInfo.skuid}}</li>
+						<li class="market_price"><span>定价：</span><em>￥{{goodsInfo.price * 1.2}}</em></li>
+						<li class="shop_price"><span>本店价：</span> <strong>￥{{goodsInfo.price}}</strong> <a href="">(降价通知)</a></li>
+						<li><span>上架时间：</span>{{goodsInfo.on_sale_date}}</li>
+						<li :class="['star', 'star' + parseInt(goodsInfo.comment_level)]"><span>商品评分：</span> 
+						<strong></strong><a href="">(已有{{goodsInfo.comment_count}}人评价)</a></li> 
+						<!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>
 					<form action="flow1.html" method="post" class="choose">
 						<ul>
-							<li class="product">
+							<li class="product" 
+							v-for="(spec,index) in goodsInfo.spec_list" :key="index">
 								<dl>
-									<dt>颜色：</dt>
+									<dt>{{spec.specName}}:</dt>
 									<dd>
-										<a class="selected" href="javascript:;">黑色 <input type="radio" name="color" value="黑色" checked="checked" /></a>
-										<a href="javascript:;">白色 <input type="radio" name="color" value="白色" /></a>
-										<a href="javascript:;">蓝色 <input type="radio" name="color" value="蓝色" /></a>
+										<a v-for="(opt,optIndex) in spec.options" :key="optIndex"  href="javascript:;"
+									:class="{'selected':goodsInfo.spec_info.id_list.indexOf(spec.id + ':' + opt.id) != -1}"
+										@click="selectSpec(spec.id, opt.id)" 
+										>{{opt.optionName}}
+											 <input type="radio" name="color" :value="opt.optionName" checked="checked" />
+											 </a>
+								
 										<input type="hidden" name="" value="" />
 									</dd>
 								</dl>
 							</li>
 
-							<li class="product">
-								<dl>
-									<dt>版本：</dt>
-									<dd>
-										<a href="javascript:;">i3 4G内存版 <input type="radio" name="ver" value="" /></a>
-										<a href="javascript:;">i5 4G内存版 <input type="radio" name="ver" value=""  /></a>
-										<a class="selected" href="javascript:;">i5 8G内存版<input type="radio" name="ver" value="" checked="checked" /></a>
-										<a href="javascript:;">SSD超极本 <input type="radio" name="ver" value="" /></a>
-										<input type="hidden" name="" value="" />
-									</dd>
-								</dl>
-							</li>
-							
-							<li>
-								<dl>
-									<dt>购买数量：</dt>
-									<dd>
-										<a href="javascript:;" id="reduce_num"></a>
-										<input type="text" name="amount" value="1" class="amount"/>
-										<a href="javascript:;" id="add_num"></a>
-									</dd>
-								</dl>
-							</li>
-
-							<li>
-								<dl>
-									<dt>&nbsp;</dt>
-									<dd>
-										<input type="submit" value="" class="add_btn" />
-									</dd>
-								</dl>
-							</li>
-
+					
 						</ul>
 					</form>
 				</div>
@@ -566,12 +511,13 @@ export default {
     link: [
       {rel:'stylesheet',href:'/style/goods.css'},
       {rel:'stylesheet',href:'/style/common.css'},
-      {rel:'stylesheet',href:'/style/bottomnav.css'},
+	  {rel:'stylesheet',href:'/style/bottomnav.css'},
+	   {rel:'stylesheet',href:'/style/jqzoom.css'},
     ],
     script: [
       {type:'text/javascript',src:'/js/header.js'},
       {type:'text/javascript',src:'/js/goods.js'},
-      {type:'text/javascript',src:'/js/jqzoom-core.js'},
+	  {type:'text/javascript',src:'/js/jqzoom-core.js'},
     ]
   },
   data() {
@@ -584,15 +530,74 @@ export default {
       Foot,
       Bottomnav
   },
-  async asyncData({ app }) {
-    let { data } = await app.$request.findAllCategory()
+  methods: {
+	  //切换规格
+	  selectSpec(specId,optId){
+		//重新组合
+		let id_list_arr = this.goodsInfo.spec_info.id_list.split("|");
+		let newArr = [];
+		for (let i = 0; i < id_list_arr.length; i++) {
+			let ids = id_list_arr[i];
+			let ids_arr = ids.split(":");
+			if(specId == ids_arr[0]){
+				newArr.push(specId+":"+optId)
+			}else{
+				newArr.push(ids);
+			}
+		}
+		let new_id_list = newArr.join("|");
+		console.warn(new_id_list);
+
+		//获得skuid
+		let skuid = '';
+		for (let i = 0; i < this.goodsInfo.sku_list.length; i++) {
+			let obj = this.goodsInfo.sku_list[i];
+			if(new_id_list == obj.id_list){
+				skuid = obj.skuid
+				break
+			}
+		}
+
+		//如果skuid不存在,表示数据有问题,不跳转
+		if(!skuid){
+			skuid = this.goodsInfo.skuid
+		}
+
+		//重新加载,跳转当前页面
+		location.href = '/goods?id='+skuid
+		
+	  }
+  },
+   mounted() {
+    // 页面加载成功 图片放大效果
+    $(function(){
+			$('.jqzoom').jqzoom({
+        zoomType: 'standard',
+        lens:true,
+        preloadImages: false,
+        alwaysOn:false,
+        title:false,
+        zoomWidth:400,
+        zoomHeight:400
+      });
+    })
+
+  },
+  async asyncData({ app,query }) {
+	  //获取请求的参数
+	  let skuId = query.id;
+	let [{data:categoryData},{data:goodsData}] = 
+	await Promise.all([app.$request.findAllCategory(),app.$request.getGoodsInfo(skuId)])
     return {
-      categoryList : data.data
+	  categoryList : categoryData.data,
+	  goodsInfo:goodsData.data
     }
   },
 }
 </script>
 
 <style>
-
+  .midpic img {
+    width: 100%;
+  }
 </style>

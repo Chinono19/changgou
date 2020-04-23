@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d31bfdde-e099-47c8-8363-c530e913886b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/SkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/SkuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,18 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/SkuPhoto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/OneSkuResult.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="483">
               <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,22 +64,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/SkuService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="151" selection-start-line="151" selection-end-line="151" />
+            <state relative-caret-position="65">
+              <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#findSku#0;class#SkuService#0" />
-                <element signature="e#852#2073#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="160" column="53" lean-forward="true" selection-start-line="160" selection-start-column="53" selection-end-line="160" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,7 +192,6 @@
         <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/vo/SearchVo.java" />
         <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/vo/ReturnSku.java" />
         <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/controller/SkuSearchController.java" />
-        <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java" />
         <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/SkuPhoto.java" />
         <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/OneSkuResult.java" />
         <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuPhotoMapper.java" />
@@ -203,6 +200,7 @@
         <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuMapper.java" />
         <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/SkuService.java" />
         <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java" />
+        <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java" />
       </list>
     </option>
   </component>
@@ -229,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -497,6 +496,16 @@
               <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
               <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinono" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou_search_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -511,7 +520,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -522,7 +530,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587467668756" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587558734578" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -633,9 +641,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CGWebServiceApplication" />
-        <item itemvalue="Spring Boot.CGZuulApplication" />
         <item itemvalue="Spring Boot.CGSearchServiceApplication" />
+        <item itemvalue="Spring Boot.CGZuulApplication" />
+        <item itemvalue="Spring Boot.CGWebServiceApplication" />
         <item itemvalue="Spring Boot.CGEurekaApplication" />
         <item itemvalue="JUnit.TestSkuFeign.demo03" />
       </list>
@@ -676,7 +684,8 @@
       <workItem from="1587370026711" duration="1683000" />
       <workItem from="1587452490577" duration="3597000" />
       <workItem from="1587527211940" duration="599000" />
-      <workItem from="1587554341865" duration="1453000" />
+      <workItem from="1587554341865" duration="2212000" />
+      <workItem from="1587642475064" duration="1642000" />
     </task>
     <servers />
   </component>
@@ -713,13 +722,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82463000" />
+    <option name="totallyTimeSpent" value="84864000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21179625" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21447721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -757,6 +765,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/resources/application.yml">
@@ -1078,16 +1098,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuCommentMapper.java" />
-    <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2369">
-          <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/SkuPhoto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1112,6 +1122,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1146,10 +1166,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuMapper.java">
+    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1158,20 +1178,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/SkuService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="65">
+          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#findSku#0;class#SkuService#0" />
-            <element signature="e#852#2073#1" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java">
+    <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="160" column="53" lean-forward="true" selection-start-line="160" selection-start-column="53" selection-end-line="160" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
