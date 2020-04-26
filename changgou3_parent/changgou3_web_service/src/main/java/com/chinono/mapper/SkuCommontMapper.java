@@ -33,4 +33,14 @@ public interface SkuCommontMapper extends Mapper<SkuComment> {
     @Select("SELECT AVG(star) FROM tb_sku_comment WHERE sku_id = #{skuId}")
     public Double findAvgStarBySkuId(@Param("skuId") Integer skuId);
 
+
+    /**
+     * 指定spu前提下，根据ratio查询评论数
+     * @param spuId  这是spu 的id
+     * @param ratio 这是查询 好评等级的标识
+     * @return
+     */
+    @Select("select count(*) from tb_sku_comment where spu_id = #{spuId} and ratio = #{ratio}")
+    public Integer findCommentCountByRatio(@Param("spuId") Integer spuId, @Param("ratio") String ratio );
+
 }

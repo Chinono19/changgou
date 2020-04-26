@@ -23,7 +23,11 @@ const request = {
     //查询详情
     getGoodsInfo:(skuId)=>{
         return axios.get('cgwebservice/sku/goods/'+skuId);
-    }
+    },
+    //查询所有的评论
+    findComments : (spuId , pageNum , pageSize) => {
+     return axios.get(`/cgwebservice/comments/spu/${spuId}?pageNum=${pageNum}&pageSize=${pageSize}`)
+     }
 
 }
 
