@@ -41,6 +41,12 @@ public class JwtProperties {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        try {
+            this.publicKey = RasUtils.getPublicKey(this.pubKeyPath);
+            this.privateKey = RasUtils.getPrivateKey(this.priKeyPath);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }

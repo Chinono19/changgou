@@ -15,9 +15,3 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port}
 
-sc:
-  jwt:
-    secret: sc@Login(Auth}*^31)&czxy% # 登录校验的密钥
-    pubKeyPath: D:/rsa/rsa.pub # 公钥地址
-    priKeyPath: D:/rsa/rsa.pri # 私钥地址
-    expire: 360 # 过期时间,单位分钟

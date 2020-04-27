@@ -3,6 +3,8 @@
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/changgou3_auth_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/changgou3_cart_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/changgou3_carts_service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/changgou3_common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/changgou3_common/changgou3_common_auth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/changgou3_common/changgou3_common_db" charset="UTF-8" />

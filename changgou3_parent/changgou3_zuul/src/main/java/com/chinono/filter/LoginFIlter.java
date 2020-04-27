@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.security.PublicKey;
 import java.util.List;
 
 @Component
@@ -54,8 +55,9 @@ public class LoginFIlter extends ZuulFilter {
         RequestContext currentContext = RequestContext.getCurrentContext();
         HttpServletRequest request = currentContext.getRequest();
         String token = request.getHeader("Authorization");
+        PublicKey publicKey = jwtProperties.getPublicKey();
         try {
-            JwtUtils.getObjectFromToken(token,jwtProperties.getPublicKey(), User.class);
+            JwtUtils.getObjectFromToken(token,publicKey, User.class);
         } catch (Exception e) {
             e.printStackTrace();
             //提示信息

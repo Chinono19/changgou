@@ -1,4 +1,22 @@
 const request = {
+     //以前的
+     checkUsername:(user)=>{
+        return axios.post('/cgwebservice/user/checkusername',user)
+    },
+    checkPhone:(phone)=>{
+        return axios.post('/cgwebservice/user/checkPhone?phone='+phone)
+    },
+    sendSms:(user)=>{
+        return axios.post('/cgwebservice/sms/sendSms',user);
+    },
+    register : ( user ) => {
+        return axios.post('/cgwebservice/user/register' , user )
+    },
+    userLogin:(user)=>{
+        return axios.post('/cgwebservice/user/userLogin' , user )
+    }
+     //--end
+     ,
     findAllNews:()=>{
         return axios.get('/cgwebservice/news/findAllNews',{
             params:{
@@ -27,8 +45,8 @@ const request = {
     //查询所有的评论
     findComments : (spuId , pageNum , pageSize) => {
      return axios.get(`/cgwebservice/comments/spu/${spuId}?pageNum=${pageNum}&pageSize=${pageSize}`)
-     }
-
+     },
+    
 }
 
 var axios = null

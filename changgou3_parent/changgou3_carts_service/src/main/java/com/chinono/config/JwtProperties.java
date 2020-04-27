@@ -1,5 +1,6 @@
 package com.chinono.config;
 
+
 import com.chinono.utils.RasUtils;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -29,23 +30,15 @@ public class JwtProperties {
         File pubFIle = new File(this.pubKeyPath);
         File priFIle = new File(this.priKeyPath);
         //2)校验文件,不存在生产公钥和私钥
-        if (!pubFIle.exists() || !priFIle.exists()){
-            try {
-                RasUtils.generateKey(this.pubKeyPath,this.priKeyPath,this.secret);
-                this.publicKey = RasUtils.getPublicKey(this.pubKeyPath);
-                this.privateKey = RasUtils.getPrivateKey(this.priKeyPath);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        }
         try {
-            this.publicKey = RasUtils.getPublicKey(this.pubKeyPath);
-            this.privateKey = RasUtils.getPrivateKey(this.priKeyPath);
-        }catch (Exception e){
+        if (!pubFIle.exists() || !priFIle.exists()){
+                RasUtils.generateKey(this.pubKeyPath,this.priKeyPath,this.secret);
+        }
+        this.publicKey = RasUtils.getPublicKey(this.pubKeyPath);
+        this.privateKey = RasUtils.getPrivateKey(this.priKeyPath);
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
 }
