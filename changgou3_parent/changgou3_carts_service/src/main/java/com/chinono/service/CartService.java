@@ -23,7 +23,11 @@ public class CartService {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
-
+    /**
+     * 添加到购物车
+     * @param loginUser
+     * @param cartVo
+     */
     public void addCart(User loginUser, CartVo cartVo){
         BaseResult<OneSkuResult> baseResult = skuFeign.findById(cartVo.getSkuid());
         OneSkuResult oneSkuResult = baseResult.getData();
@@ -37,7 +41,7 @@ public class CartService {
         cartItem.setPrice( oneSkuResult.getPrice() );
         cartItem.setCount( cartVo.getCount() );
         cartItem.setChecked( cartVo.getChecked() );
-        cartItem.setMidlogo( oneSkuResult.getSpecInfo().get("biglogo") );
+        cartItem.setMidlogo( oneSkuResult.getLogo().get("biglogo") );
         cartItem.setSpecInfo( JSON.toJSONString(oneSkuResult.getSpecInfo()) );
         //从redis中获取购物车 如果没有创建一个新的购物车
         String carJson = stringRedisTemplate.opsForValue().get("cart" + loginUser.getId());
@@ -53,5 +57,18 @@ public class CartService {
         carJson = JSON.toJSONString(cart);
         stringRedisTemplate.opsForValue().set("cart"+loginUser.getId(),carJson);
 
+    }
+
+    /**
+     * 查询当前用户的购物车
+     * @param user
+     * @return
+     */
+    public Cart queryCartList(User user){
+        String jsonStr = stringRedisTemplate.opsForValue().get("cart" + user.getId());
+
+        //返回
+        Cart cart = JSON.parseObject(jsonStr, Cart.class);
+        return cart;
     }
 }

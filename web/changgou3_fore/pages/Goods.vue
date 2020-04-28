@@ -293,6 +293,7 @@
                 <strong></strong>
                 <a href>(已有{{goodsInfo.comment_count}}人评价)</a>
               </li>
+              
               <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
             </ul>
             <form action="flow1.html" method="post" class="choose">
@@ -321,6 +322,26 @@
                     </dd>
                   </dl>
                 </li>
+
+                <li>
+								<dl>
+									<dt>购买数量：</dt>
+									<dd>
+										<a href="javascript:;" id="reduce_num"></a>
+										<input type="text" name="amount" v-model="count" class="amount"/>
+										<a href="javascript:;" id="add_num"></a>
+									</dd>
+								</dl>
+							</li>
+
+							<li>
+								<dl>
+									<dt>&nbsp;</dt>
+									<dd>
+										<input type="submit" value="" class="add_btn" @click.prevent="addToCartFn" />
+									</dd>
+								</dl>
+							</li>
               </ul>
             </form>
           </div>
@@ -600,7 +621,8 @@ export default {
       categoryList: [],
       commentResult: {
         ratio: {}
-      } //评论查询结果
+      }, //评论查询结果
+      count:1,
     };
   },
   components: {
@@ -652,6 +674,60 @@ export default {
       let { data } = await this.$request.findComments(spuId, pageNum, pageSize);
       this.commentResult = data.data;
       console.warn(this.commentResult);
+    },
+    //添加到购物车
+    async addToCartFn(){
+      console.warn("add");
+      //准备数据
+      let params = {
+        skuid:this.goodsInfo.skuid,
+        count:this.count,
+        checked:true
+      }
+      //发送ajax
+      let {data} = await this.$request.addToCart(params);
+      console.warn(data);
+      
+      //处理结果
+      if(data.code == 1){
+        console.warn("添加成功");
+        location.href="/flow1"
+      }else{
+        alert("添加失败")
+        //这就是用户没有登录
+        let cartItem = {
+          skuid:this.goodsInfo.skuid,
+          spuid:this.goodsInfo.spuid,
+          goods_name:this.goodsInfo.goods_name,
+          price:this.goodsInfo.price,
+          count:this.count,
+          checked:true,
+          midlogo: this.goodsInfo.logo.biglogo,
+          specInfo: this.goodsInfo.spec_info,
+        }
+        let cartStr = localStorage.getItem("cart");
+        let cart = JSON.parse(cartStr);
+        if(!cart){
+          cart = []
+        }
+        //把准备的数据添加到购物车中
+         let tempArr = cart.filter( item => item.skuid == cartItem.skuid)
+         if(tempArr.length == 0){
+           cart.push(cartItem)
+         }else{
+             //  如果商品购物车已有，数量累加
+            cart.forEach( item => {
+            if(item.skuid == cartItem.skuid){
+              item.count += parseInt(cartItem.count)
+            }
+          })
+         }
+         //把购物车保存到localStorage中去
+         localStorage.setItem("cart",JSON.stringify(cart));
+         //跳转到购物车列表页面
+         location.href = '/flow1'
+      }
+      
     }
   },
   mounted() {

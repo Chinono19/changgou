@@ -46,7 +46,14 @@ const request = {
     findComments : (spuId , pageNum , pageSize) => {
      return axios.get(`/cgwebservice/comments/spu/${spuId}?pageNum=${pageNum}&pageSize=${pageSize}`)
      },
-    
+    //添加到购物车
+    addToCart:(params)=>{
+        return axios.post('/gccartservice/carts/addOrder', params );
+    },
+    //查询当前用户的购物车
+    getCart : () => {
+      return axios.get('/gccartservice/carts/queryCartList')
+    }
 }
 
 var axios = null
