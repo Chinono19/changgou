@@ -55,16 +55,16 @@
               </strong>
             </td>
             <td class="col2">
-                {{item.spec_info}}
+               <p v-for="(value,key,index) in item.spec_info_id_txt" :key="index">{{key}}:{{value}} </p>
             </td>
             <td class="col3">
               ￥
               <span>{{item.price}}</span>
             </td>
             <td class="col4">
-              <a href="javascript:;" class="reduce_num"></a>
+              <a href="javascript:;" class="reduce_num" @click.prevent="minus(item)"></a>
               <input type="text" name="amount" v-model="item.count" class="amount" />
-              <a href="javascript:;" class="add_num"></a>
+              <a href="javascript:;" class="add_num" @click.prevent="plus(item)"></a>
             </td>
             <td class="col5">
               ￥
@@ -74,66 +74,7 @@
               <a href>删除</a>
             </td>
           </tr>
-          <tr>
-            <td class="col1">
-              <a href>
-                <img src="images/cart_goods2.jpg" alt />
-              </a>
-              <strong>
-                <a href>九牧王王正品新款时尚休闲中长款茄克EK01357200</a>
-              </strong>
-            </td>
-            <td class="col2">
-              <p>颜色：淡蓝色</p>
-              <p>尺码：165/88</p>
-            </td>
-            <td class="col3">
-              ￥
-              <span>1102.00</span>
-            </td>
-            <td class="col4">
-              <a href="javascript:;" class="reduce_num"></a>
-              <input type="text" name="amount" value="1" class="amount" />
-              <a href="javascript:;" class="add_num"></a>
-            </td>
-            <td class="col5">
-              ￥
-              <span>1102.00</span>
-            </td>
-            <td class="col6">
-              <a href>删除</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="col1">
-              <a href>
-                <img src="images/cart_goods3.jpg" alt />
-              </a>
-              <strong>
-                <a href>【1111购物狂欢节】捷王纯手工缝制休闲男鞋大头皮鞋 头层牛</a>
-              </strong>
-            </td>
-            <td class="col2">
-              <p>颜色：0922红棕现货</p>
-              <p>尺码：40现货</p>
-            </td>
-            <td class="col3">
-              ￥
-              <span>269.00</span>
-            </td>
-            <td class="col4">
-              <a href="javascript:;" class="reduce_num"></a>
-              <input type="text" name="amount" value="1" class="amount" />
-              <a href="javascript:;" class="add_num"></a>
-            </td>
-            <td class="col5">
-              ￥
-              <span>269.00</span>
-            </td>
-            <td class="col6">
-              <a href>删除</a>
-            </td>
-          </tr>
+    
         </tbody>
         <tfoot>
           <tr>
@@ -141,7 +82,7 @@
               购物金额总计：
               <strong>
                 ￥
-                <span id="total">1870.00</span>
+                <span id="total">{{totalPrice}}</span>
               </strong>
             </td>
           </tr>
@@ -175,10 +116,44 @@ export default {
       TopNav,
       Foot
   },
+  computed: {
+    totalPrice(){
+      //求和
+      let sum = 0;
+      this.cart.forEach(item=>{
+        sum += (item.price * item.count)
+      })
+    return sum
+    }
+  },
   data() {
       return {
           cart:[]
       }
+  },
+  methods: {
+    minus(item){
+      //减操作
+      if(item.count > 1){
+        item.count --;
+      }
+    },
+    plus(item){
+      item.count ++;
+    }
+  },
+  //监听器
+  watch: {
+    cart:{
+      async handler(newCart,oldCart){
+        let {data} = await this.$request.updateCart(newCart);
+        if(data.code == 0){
+          alert(data.message);
+        }
+      },
+      immediate:false, //true就是会直接执行
+      deep:true  //深度监听,就是对象的下面的属性改变之后也会执行
+    }
   },
   async mounted(){
       //获取token

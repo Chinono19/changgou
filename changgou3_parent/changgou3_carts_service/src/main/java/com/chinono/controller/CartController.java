@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @RequestMapping("/carts")
@@ -57,5 +58,21 @@ public class CartController {
         Cart cart = cartService.queryCartList(loginUser);
         Collection<CartItem> values = cart.getData().values();
         return BaseResult.ok("查询成功",values);
+    }
+
+    @PutMapping("/updateCart")
+    public BaseResult updateCart(@RequestBody List<CartVo> cartVoList)
+    {
+        try {
+            User loginUser = null;
+            String token = request.getHeader("Authorization");
+             loginUser = JwtUtils.getObjectFromToken(token, jwtProperties.getPublicKey(), User.class);
+            //2 更新
+            cartService.updateCart(loginUser ,cartVoList );
+            //3 提示
+            return BaseResult.ok("更新成功");
+        }catch (Exception e){
+            return BaseResult.error(e.getMessage());
+        }
     }
 }

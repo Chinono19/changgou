@@ -53,6 +53,10 @@ const request = {
     //查询当前用户的购物车
     getCart : () => {
       return axios.get('/gccartservice/carts/queryCartList')
+    },
+    //更新购物车
+    updateCart:(cart)=>{
+     return axios.put('/gccartservice/carts/updateCart',cart);
     }
 }
 

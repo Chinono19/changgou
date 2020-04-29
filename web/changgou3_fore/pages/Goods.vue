@@ -703,7 +703,7 @@ export default {
           count:this.count,
           checked:true,
           midlogo: this.goodsInfo.logo.biglogo,
-          specInfo: this.goodsInfo.spec_info,
+          spec_info_id_txt: JSON.parse(this.goodsInfo.spec_info_id_txt),
         }
         let cartStr = localStorage.getItem("cart");
         let cart = JSON.parse(cartStr);

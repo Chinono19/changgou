@@ -3,6 +3,8 @@ package com.chinono.po;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.Map;
+
 /** 购物车的购物项
  * Created by liangtong.
  */
@@ -18,4 +20,6 @@ public class CartItem {
     private String midlogo;         //图标
     @JsonProperty("spec_info")
     private String specInfo;        //规格信息
+    @JsonProperty("spec_info_id_txt")
+    private Map<String,String> specInfoIdTxt;        //规格信息
 }

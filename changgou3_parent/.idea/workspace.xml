@@ -5,7 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/service/CartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou3_pojo/target/classes/com/chinono/po/CartItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_pojo/target/classes/com/chinono/po/CartItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/pages/Goods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/pages/Goods.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/pages/flow1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/pages/flow1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/plugins/apiserver.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/plugins/apiserver.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,14 +34,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="301">
+              <caret line="62" column="28" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#addOrder#0;class#CartController#0" />
+                <element signature="method#queryCartList#0;class#CartController#0" />
               </folding>
             </state>
           </provider>
@@ -45,11 +52,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="278">
+              <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#addCart#0;class#CartService#0" />
+                <element signature="method#queryCartList#0;class#CartService#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Cart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -115,7 +142,6 @@
         <option value="$PROJECT_DIR$/changgou3_cart_service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/changgou3_cart_service/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java" />
         <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Cart.java" />
         <option value="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/feign/SkuFeign.java" />
         <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/vo/CartVo.java" />
@@ -128,8 +154,9 @@
         <option value="$PROJECT_DIR$/changgou3_zuul/src/main/java/com/chinono/filter/LoginFIlter.java" />
         <option value="$PROJECT_DIR$/changgou3_zuul/src/main/java/com/chinono/config/JwtProperties.java" />
         <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/config/JwtProperties.java" />
-        <option value="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java" />
         <option value="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java" />
+        <option value="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java" />
       </list>
     </option>
   </component>
@@ -730,8 +757,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -741,7 +768,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588074877466" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588074954345" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -896,7 +923,8 @@
       <workItem from="1587642475064" duration="1798000" />
       <workItem from="1587728425441" duration="4086000" />
       <workItem from="1587982421912" duration="6278000" />
-      <workItem from="1588069577917" duration="3154000" />
+      <workItem from="1588069577917" duration="3398000" />
+      <workItem from="1588147963524" duration="2812000" />
     </task>
     <servers />
   </component>
@@ -933,13 +961,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98538000" />
+    <option name="totallyTimeSpent" value="101594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22520107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1179,20 +1206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SkuController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -1375,22 +1388,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="278">
+          <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addCart#0;class#CartService#0" />
+            <element signature="method#queryCartList#0;class#CartService#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="301">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addOrder#0;class#CartController#0" />
+            <element signature="method#queryCartList#0;class#CartController#0" />
           </folding>
         </state>
       </provider>
