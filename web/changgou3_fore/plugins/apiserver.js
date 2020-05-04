@@ -57,6 +57,10 @@ const request = {
     //更新购物车
     updateCart:(cart)=>{
      return axios.put('/gccartservice/carts/updateCart',cart);
+    },
+    //收货人地址
+    getAddress: () => {
+         return axios.get('cgorderservice/address/findAll')
     }
 }
 

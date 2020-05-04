@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d31bfdde-e099-47c8-8363-c530e913886b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_carts_service/target/classes/com/chinono/service/CartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou3_pojo/target/classes/com/chinono/po/CartItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/changgou3_pojo/target/classes/com/chinono/po/CartItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/pages/Goods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/pages/Goods.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/pages/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/pages/flow1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/pages/flow1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/plugins/apiserver.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/plugins/apiserver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/changgou3_fore/static/style/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/../web/changgou3_fore/static/style/cart.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,6 +24,7 @@
     <ignored path="$PROJECT_DIR$/changgou_search_service/target/" />
     <ignored path="$PROJECT_DIR$/changgou3_cart_service/target/" />
     <ignored path="$PROJECT_DIR$/changgou3_carts_service/target/" />
+    <ignored path="$PROJECT_DIR$/changgou3_order_service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,57 +33,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="62" column="28" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="28" />
+            <state relative-caret-position="161">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Address.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addOrder#0;class#CartController#0" />
-                <element signature="method#queryCartList#0;class#CartController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java">
+        <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/mapper/AddressMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/service/AddressService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
-              <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addCart#0;class#CartService#0" />
-                <element signature="method#queryCartList#0;class#CartService#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Cart.java">
+        <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/config/JwtProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+            <state relative-caret-position="132">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java">
+        <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/controller/AddressController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="177">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/CGWebServiceApplication.java">
+        <entry file="file://$PROJECT_DIR$/changgou3_order_service/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="322">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changgou3_common/changgou3_common_auth/src/main/java/com/chinono/utils/JwtUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changgou3_zuul/src/main/java/com/chinono/filter/LoginFIlter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/dev/repositorys/school/repository/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/com/fasterxml/jackson/annotation/JsonProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -106,13 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SpuMapper.java" />
-        <option value="$PROJECT_DIR$/changgou_search_service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/CGSearchServiceApplication.java" />
-        <option value="$PROJECT_DIR$/changgou3_common/changgou3_common_db/src/main/java/com/chinono/utils/BaseResult.java" />
-        <option value="$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SpecificationMapper.java" />
-        <option value="$PROJECT_DIR$/changgou3_web_service/pom.xml" />
-        <option value="$PROJECT_DIR$/changgou3_common/changgou3_common_db/pom.xml" />
         <option value="$PROJECT_DIR$/changgou_search_service/pom.xml" />
         <option value="$PROJECT_DIR$/changgou3_pojo/pom.xml" />
         <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/vo/SearchSku.java" />
@@ -157,6 +198,13 @@
         <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java" />
         <option value="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java" />
         <option value="$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/changgou3_order_service/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/CGOrderApplication.java" />
+        <option value="$PROJECT_DIR$/changgou3_order_service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Address.java" />
+        <option value="$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/mapper/AddressMapper.java" />
+        <option value="$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/service/AddressService.java" />
+        <option value="$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/controller/AddressController.java" />
       </list>
     </option>
   </component>
@@ -183,6 +231,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,27 +244,6 @@
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
               <item name="changgou3_auth_service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_auth_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_auth_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="changgou3_auth_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -404,6 +433,96 @@
               <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
               <item name="changgou3_eureka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinono" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinono" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinono" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinono" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinono" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="changgou3_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="changgou3_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="changgou3_order_service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -757,8 +876,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -768,7 +885,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588074954345" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588580004167" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -778,10 +895,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chinono.config" />
       <recent name="com.chinono.repository" />
       <recent name="com.chinono.utils" />
       <recent name="com.chinono.vo" />
-      <recent name="com.chinono.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\project\changgou\changgou3_parent\changgou_search_service\src\main\java\com\chinono\vo" />
@@ -808,20 +925,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CGCartServiceApplication">
-    <configuration name="CGCartServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="changgou3_carts_service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chinono.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinono.CGCartServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.CGOrderApplication">
     <configuration name="CGEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="changgou3_eureka" />
       <extension name="coverage">
@@ -831,6 +935,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinono.CGEurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CGOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="changgou3_order_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chinono.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinono.CGOrderApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -876,10 +993,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CGCartServiceApplication" />
+        <item itemvalue="Spring Boot.CGSearchServiceApplication" />
+        <item itemvalue="Spring Boot.CGOrderApplication" />
         <item itemvalue="Spring Boot.CGZuulApplication" />
         <item itemvalue="Spring Boot.CGWebServiceApplication" />
-        <item itemvalue="Spring Boot.CGSearchServiceApplication" />
         <item itemvalue="Spring Boot.CGEurekaApplication" />
       </list>
     </recent_temporary>
@@ -924,7 +1041,9 @@
       <workItem from="1587728425441" duration="4086000" />
       <workItem from="1587982421912" duration="6278000" />
       <workItem from="1588069577917" duration="3398000" />
-      <workItem from="1588147963524" duration="2812000" />
+      <workItem from="1588147963524" duration="2891000" />
+      <workItem from="1588235125547" duration="670000" />
+      <workItem from="1588574347805" duration="2779000" />
     </task>
     <servers />
   </component>
@@ -961,12 +1080,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101594000" />
+    <option name="totallyTimeSpent" value="105122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22520107" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23123324" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1030,81 +1149,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuPhotoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/mapper/SkuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou_search_service/src/main/java/com/chinono/service/SkuSearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="160" column="53" selection-start-line="160" selection-start-column="53" selection-end-line="160" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/BrandController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/NewsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SmsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/SpecificationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/controller/VerifyCodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-947">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/service/BrandService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1267,13 +1311,6 @@
         <state relative-caret-position="-251" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_auth_service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1295,16 +1332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_common/changgou3_common_auth/src/main/java/com/chinono/utils/JwtUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1353,13 +1380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_zuul/src/main/java/com/chinono/filter/LoginFIlter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/vo/CartVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1381,30 +1401,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/CGWebServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        <state relative-caret-position="301">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addOrder#0;class#CartController#0" />
+            <element signature="method#queryCartList#0;class#CartController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/service/CartService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="1702">
           <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1414,14 +1425,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/java/com/chinono/controller/CartController.java">
+    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Cart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="28" />
+        <state relative-caret-position="1357">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/CartItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_web_service/src/main/java/com/chinono/CGWebServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/CGOrderApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addOrder#0;class#CartController#0" />
-            <element signature="method#queryCartList#0;class#CartController#0" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_carts_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/dev/repositorys/school/repository/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/com/fasterxml/jackson/annotation/JsonProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_pojo/src/main/java/com/chinono/po/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/service/AddressService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/config/JwtProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_order_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/mapper/AddressMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_order_service/src/main/java/com/chinono/controller/AddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_zuul/src/main/java/com/chinono/filter/LoginFIlter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changgou3_common/changgou3_common_auth/src/main/java/com/chinono/utils/JwtUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

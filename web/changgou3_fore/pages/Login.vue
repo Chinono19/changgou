@@ -114,11 +114,18 @@ export default {
             let {data} = await this.$request.userLogin(this.user);
             console.warn(data);
             if(data.code==1){
-				this.$router.push("/Index");
+				// this.$router.push("/Index");
 				console.warn(mapMutations);
 				this.setData({'key':'user','value':data.other.loginName})
 				localStorage.setItem("loginName",data.other.loginName);
 				localStorage.setItem("token",data.other.token);
+
+				let returnURL = sessionStorage.getItem("returnURL");
+				if(returnURL){
+					location.href = returnURL;
+				}else{
+					location.href = '/Index'
+				}
             }else{
                 this.msg = data.message;
             }

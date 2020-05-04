@@ -1,0 +1,49 @@
+#端口号
+server:
+  port: 8100
+
+#服务名、数据源、redis地址
+spring:
+  application:
+    name: cgorderservice
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/changgou_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 1000
+      test-on-borrow: true
+  redis:
+    host: 127.0.0.1
+
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${eureka.instance.ip-address}.${server.port}
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 10
+#自定义数据
+sc:
+  worker:
+    workerId: 1
+    datacenterId: 1
+  jwt:
+    secret: sc@Login(Auth}*^31)&czxy% # 登录校验的密钥
+    pubKeyPath: F:/data/rsa/rsa.pub # 公钥地址
+    priKeyPath: F:/data/rsa/rsa.pri # 私钥地址
+    expire: 360 # 过期时间,单位分钟
+  pay:
+    appID: wx8397f8696b538317
+    mchID: 1473426802
+    key: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
+    httpConnectTimeoutMs: 5000
+    httpReadTimeoutMs: 10000
