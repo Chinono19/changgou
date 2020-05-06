@@ -36,6 +36,7 @@ public class AddressService {
      */
     public void addAddress(User user,Address address){
         //TODO 将之前默认地址 isdefault更新为0
+        addressMapper.updateDefault(user.getId(),0);
 
         //完善数据
         // 1）用户

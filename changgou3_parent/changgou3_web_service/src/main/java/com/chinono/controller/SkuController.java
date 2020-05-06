@@ -5,10 +5,7 @@ import com.chinono.service.SkuService;
 import com.chinono.utils.BaseResult;
 import com.chinono.vo.ESData;
 import com.chinono.vo.SearchSku;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -39,6 +36,14 @@ public class SkuController {
         //2 返回
         return BaseResult.ok("查询成功", oneSkuResult );
 
+    }
+
+    @PutMapping("/updateSkuNum/{skuId}")
+    public BaseResult updateSkuNum(@PathVariable("skuId")Integer skuId,Integer count){
+        //更新
+        skuService.updateSkuNum(skuId,count);
+        //返回
+        return BaseResult.ok("更新成功");
     }
 
 }

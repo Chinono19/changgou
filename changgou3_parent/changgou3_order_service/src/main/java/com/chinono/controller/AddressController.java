@@ -51,7 +51,7 @@ public class AddressController {
             return BaseResult.error("token无效或失效");
         }
         //保存
-        addressService.addAddress(loginUser , address);
+        addressService.addAddress(loginUser ,address);
         //返回
         return BaseResult.ok("添加成功");
     }

@@ -61,6 +61,10 @@ const request = {
     //收货人地址
     getAddress: () => {
          return axios.get('cgorderservice/address/findAll')
+    },
+    //添加收货人地址  
+    addAddress: ( address ) => {
+        return axios.post('/cgorderservice/address/addAddress', address )
     }
 }
 

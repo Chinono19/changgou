@@ -47,6 +47,7 @@
           </div>
 
           <div class="address_select none">
+          
             <ul>
               <li :class="{'cur': address.isdefault == 1}"
                v-for="(address,index) in addressList" :key="index"
@@ -58,59 +59,60 @@
                 <a href>删除</a>
               </li>
             </ul>
-
-            <form action class="none" name="address_form">
+          <!-- 添加收货人表单 start -->
+            <form action class="" name="address_form">
               <ul>
                 <li>
                   <label for>
                     <span>*</span>收 货 人：
                   </label>
-                  <input type="text" name class="txt" />
+                  <input type="text" name class="txt" v-model="newAddress.shr_name" />
                 </li>
                 <li>
                   <label for>
                     <span>*</span>所在地区：
                   </label>
-                  <select name id>
-                    <option value>请选择</option>
-                    <option value>北京</option>
-                    <option value>上海</option>
-                    <option value>天津</option>
-                    <option value>重庆</option>
-                    <option value>武汉</option>
+                  <select v-model="newAddress.shr_province" >
+                    <option value="">请选择</option>
+                    <option value="北京">北京</option>
+                    <option value="上海">上海</option>
+                    <option value="天津">天津</option>
+                    <option value="重庆">重庆</option>
+                    <option value="武汉">武汉</option>
                   </select>
 
-                  <select name id>
-                    <option value>请选择</option>
-                    <option value>朝阳区</option>
-                    <option value>东城区</option>
-                    <option value>西城区</option>
-                    <option value>海淀区</option>
-                    <option value>昌平区</option>
+                  <select name id v-model="newAddress.shr_city">
+                    <option >请选择</option>
+                    <option value="朝阳区">朝阳区</option>
+                    <option value="东城区">东城区</option>
+                    <option value="西城区">西城区</option>
+                    <option value="海淀区">海淀区</option>
+                    <option value="昌平区">昌平区</option>
                   </select>
 
-                  <select name id>
-                    <option value>请选择</option>
-                    <option value>西二旗</option>
-                    <option value>西三旗</option>
-                    <option value>三环以内</option>
+                  <select name id v-model="newAddress.shr_area">
+                    <option value="">请选择</option>
+                    <option value="西二旗">西二旗</option>
+                    <option value="西三旗">西三旗</option>
+                    <option value="三环以内">三环以内</option>
                   </select>
                 </li>
                 <li>
                   <label for>
                     <span>*</span>详细地址：
                   </label>
-                  <input type="text" name class="txt address" />
+                  <input type="text" name class="txt address" v-model="newAddress.shr_address" />
                 </li>
                 <li>
                   <label for>
                     <span>*</span>手机号码：
                   </label>
-                  <input type="text" name class="txt" />
+                  <input type="text"  v-model="newAddress.shr_mobile" name class="txt" />
                 </li>
               </ul>
             </form>
-            <a href class="confirm_btn">
+                  <!-- 添加收货人表单 end -->
+            <a href class="confirm_btn" @click.prevent="addAddressFn">
               <span>保存收货人信息</span>
             </a>
           </div>
@@ -274,44 +276,26 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr v-for="(item,index) in cart" :key="index">
                 <td class="col1">
                   <a href>
-                    <img src="images/cart_goods1.jpg" alt />
+                    <img :src="item.midlogo" alt />
                   </a>
                   <strong>
-                    <a href>【1111购物狂欢节】惠JackJones杰克琼斯纯羊毛菱形格</a>
+                    <a href>{{item.goods_name}}</a>
                   </strong>
                 </td>
                 <td class="col2">
-                  <p>颜色：073深红</p>
+                  <p v-for="(value,key,index) in item.spec_info_id_txt" :key="index">{{key}}:{{value}}</p>
                   <p>尺码：170/92A/S</p>
                 </td>
-                <td class="col3">￥499.00</td>
-                <td class="col4">1</td>
+                <td class="col3">￥{{item.price}}</td>
+                <td class="col4">{{item.count}}</td>
                 <td class="col5">
-                  <span>￥499.00</span>
+                  <span>￥{{item.price*item.count}}</span>
                 </td>
               </tr>
-              <tr>
-                <td class="col1">
-                  <a href>
-                    <img src="images/cart_goods2.jpg" alt />
-                  </a>
-                  <strong>
-                    <a href>九牧王王正品新款时尚休闲中长款茄克EK01357200</a>
-                  </strong>
-                </td>
-                <td class="col2">
-                  <p>颜色：淡蓝色</p>
-                  <p>尺码：165/88</p>
-                </td>
-                <td class="col3">￥1102.00</td>
-                <td class="col4">1</td>
-                <td class="col5">
-                  <span>￥1102.00</span>
-                </td>
-              </tr>
+
             </tbody>
             <tfoot>
               <tr>
@@ -319,7 +303,7 @@
                   <ul>
                     <li>
                       <span>4 件商品，总商品金额：</span>
-                      <em>￥5316.00</em>
+                      <em>￥{{totalPrice}}</em>
                     </li>
                     <li>
                       <span>返现：</span>
@@ -379,23 +363,66 @@ export default {
   data() {
     return {
       addressList: [], //所有收货人
-      defaultAddress: {} //默认收获人
+      defaultAddress: {}, //默认收获人
+      newAddress: {         //新地址
+      'shr_name': '',
+      'shr_mobile': '',
+      'shr_province': '',
+      'shr_city': '',
+      'shr_area': '',
+      'shr_address': ''
+      },
+      cart:[],//勾选的购物车中的数据
     };
   },
-  async mounted() {
-    //查询收获人
-    let { data } =await this.$request.getAddress();
-    this.addressList = data.data;
+  methods: {
+    //查询所有的地址
+    async findAllAddress(){
+          //查询收获人
+        let { data } =await this.$request.getAddress();
+        this.addressList = data.data;
 
-    let defArr = this.addressList.filter(item => {
-      if(item.isdefault == 1){
-          return item
+        let defArr = this.addressList.filter(item => {
+          if(item.isdefault == 1){
+              return item
+          }
+        });
+        console.warn(defArr);
+      this.defaultAddress = defArr[0];
+        console.warn(this.addressList);
+    },
+    //添加地址
+    async addAddressFn(){
+      let {data} = await this.$request.addAddress(this.newAddress);
+      //如果成功显示 更新数据
+      if(data.code == 1){
+        this.findAllAddress();
+        //清空表单
+        this.newAddress = {};
       }
-    });
-    console.warn(defArr);
-   this.defaultAddress = defArr[0];
-    console.warn(this.addressList);
-  }
+
+    }
+  },
+  async  mounted() {
+     this.findAllAddress();
+     //查询购物车 , 并且过滤选中的信息
+     let {data} = await this.$request.getCart();
+     this.cart = data.data.filter(item=>item.checked);
+     console.warn(this.cart );
+
+     
+  },
+  computed: {
+    totalPrice(){
+      let sum = 0;
+       //遍历，求所有小计的和
+      this.cart.forEach(item=>{
+        sum += (item.price * item.count)
+      })
+
+      return sum
+    }
+  },
 }
 </script>
 

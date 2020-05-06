@@ -3,10 +3,13 @@ package com.chinono.service;
 import com.alibaba.fastjson.JSON;
 import com.chinono.mapper.*;
 import com.chinono.po.*;
+import com.chinono.utils.BaseResult;
 import com.chinono.vo.ESData;
 import com.chinono.vo.SearchSku;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -153,5 +156,15 @@ public class SkuService {
        return oneSkuResult;
    }
 
+    /**
+     * 更新sku的库存
+     * @param skuId
+     * @param count
+     */
+    public void updateSkuNum(Integer skuId,Integer count){
+        Sku sku = skuMapper.selectByPrimaryKey(skuId);
+        sku.setStock(sku.getStock() - count);
+        skuMapper.updateByPrimaryKey(sku);
+    }
 
 }
