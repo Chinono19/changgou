@@ -4,12 +4,13 @@ import com.chinono.utils.BaseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @FeignClient(value = "cgwebservice",path = "/sku")
 public interface SkuFeign {
 
-    @PutMapping("/updateSkuNum/{skuId}")
-    public BaseResult updateSkuNum(@PathVariable("skuId")Integer skuId, Integer count);
+    @PutMapping("/updateSkuNum")
+    public BaseResult updateSkuNum(@RequestParam("skuId") Integer skuId, @RequestParam("count")Integer count);
 
 }

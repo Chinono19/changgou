@@ -38,8 +38,8 @@ public class SkuController {
 
     }
 
-    @PutMapping("/updateSkuNum/{skuId}")
-    public BaseResult updateSkuNum(@PathVariable("skuId")Integer skuId,Integer count){
+    @PutMapping("/updateSkuNum")
+    public BaseResult updateSkuNum(@RequestParam("skuId") Integer skuId,@RequestParam("count")Integer count){
         //更新
         skuService.updateSkuNum(skuId,count);
         //返回

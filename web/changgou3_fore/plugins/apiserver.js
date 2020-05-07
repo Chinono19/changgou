@@ -65,6 +65,10 @@ const request = {
     //添加收货人地址  
     addAddress: ( address ) => {
         return axios.post('/cgorderservice/address/addAddress', address )
+    },
+    //下订单
+    addOrder: ( params ) => {
+     return axios.post('/cgorderservice/orders/addOrder', params )
     }
 }
 

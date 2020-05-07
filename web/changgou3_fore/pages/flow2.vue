@@ -52,7 +52,7 @@
               <li :class="{'cur': address.isdefault == 1}"
                v-for="(address,index) in addressList" :key="index"
               >
-                <input type="radio" name="address" checked="checked" />aaa
+                <input v-model="selectAddressId" :value="address.id" type="radio" name="address" checked="checked" />aaa
                 {{address.shr_name}}  {{address.shr_province}} {{address.shr_city}} {{address.shr_area}} {{address.shr_address}} {{address.shr_mobile}}
                 <a href>设为默认地址</a>
                 <a href>编辑</a>
@@ -327,7 +327,7 @@
       </div>
 
       <div class="fillin_ft">
-        <a href>
+        <a href @click.prevent="addOrderFN">
           <span>提交订单</span>
         </a>
         <p>
@@ -373,6 +373,7 @@ export default {
       'shr_address': ''
       },
       cart:[],//勾选的购物车中的数据
+      selectAddressId: '' //选中的地址id
     };
   },
   methods: {
@@ -389,6 +390,7 @@ export default {
         });
         console.warn(defArr);
       this.defaultAddress = defArr[0];
+      this.selectAddressId = this.defaultAddress.id;
         console.warn(this.addressList);
     },
     //添加地址
@@ -401,6 +403,18 @@ export default {
         this.newAddress = {};
       }
 
+    },
+    //添加订单
+    async addOrderFN(){
+      let orderParam = {address_id:this.selectAddressId};
+      console.warn();
+      
+      let {data} = await this.$request.addOrder(orderParam);
+      console.warn(data);
+      
+      if(data.code == 1){
+        location.href = '/flow3?sn=' + data.other.sn
+      }
     }
   },
   async  mounted() {
