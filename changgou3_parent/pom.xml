@@ -19,6 +19,7 @@
         <module>changgou_search_service</module>
         <module>changgou3_carts_service</module>
         <module>changgou3_order_service</module>
+        <module>changgou3_pay_service</module>
     </modules>
 
     <!-- 1 确定spring boot的版本-->

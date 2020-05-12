@@ -69,7 +69,11 @@ const request = {
     //下订单
     addOrder: ( params ) => {
      return axios.post('/cgorderservice/orders/addOrder', params )
-    }
+    },
+     // 获得微信支付路径
+     payUrl: ( sn ) => {
+        return axios.post('/cgpayservice/pay/payUrl', { sn })
+     }
 }
 
 var axios = null

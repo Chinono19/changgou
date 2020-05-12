@@ -1,0 +1,34 @@
+#端口号
+server:
+  port: 8110
+
+#服务名
+spring:
+  application:
+    name: cgpayservice
+
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${eureka.instance.ip-address}.${server.port}
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 10
+#自定义数据
+sc:
+  jwt:
+    secret: sc@Login(Auth}*^31)&czxy% # 登录校验的密钥
+    pubKeyPath: F:/data/rsa/rsa.pub  #公钥地址
+    priKeyPath: F:/data/rsa/rsa.pri  # 私钥地址
+    expire: 360 # 过期时间,单位分钟
+  pay:
+    appID: wx8397f8696b538317
+    mchID: 1473426802
+    key: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
+    httpConnectTimeoutMs: 5000
+    httpReadTimeoutMs: 10000
+    notifyUrl:  http://meng.cross.echosite.cn/v3/cgpayservice/pay/callBack

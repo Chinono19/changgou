@@ -12,6 +12,7 @@
         <module name="changgou3_common_db" />
         <module name="changgou3_eureka" />
         <module name="changgou3_order_service" />
+        <module name="changgou3_pay_service" />
         <module name="changgou3_pojo" />
         <module name="changgou3_test" />
         <module name="changgou3_web_service" />
@@ -34,6 +35,7 @@
       <module name="changgou3_eureka" options="-parameters" />
       <module name="changgou3_order_service" options="-parameters" />
       <module name="changgou3_parent" options="-parameters" />
+      <module name="changgou3_pay_service" options="-parameters" />
       <module name="changgou3_pojo" options="-parameters" />
       <module name="changgou3_test" options="-parameters" />
       <module name="changgou3_web_service" options="-parameters" />
