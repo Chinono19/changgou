@@ -1,15 +1,13 @@
 package com.chinono.controller;
 
 
+import com.chinono.config.PayState;
 import com.chinono.service.PayService;
 import com.chinono.utils.BaseResult;
 import com.chinono.vo.PayRequest;
 import com.github.wxpay.sdk.WXPayUtil;
 import org.apache.commons.io.IOUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sun.nio.ch.IOUtil;
 
 import javax.annotation.Resource;
@@ -61,5 +59,16 @@ public class PayController {
         }
         System.out.println("callBck");
         return BaseResult.ok("成功交易-"+sn);
+    }
+
+    @GetMapping("/query/{sn}")
+   public BaseResult query(@PathVariable("sn")Long sn){
+        PayState payState = payService.query(sn);
+        if (payState.getCode() == 1){
+            //查询成功
+            return BaseResult.ok(payState.getDesc());
+        }else{
+            return BaseResult.error(payState.getDesc());
+        }
     }
 }

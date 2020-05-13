@@ -31,7 +31,7 @@
 		<div class="success_bd">
 			<p><span></span>订单提交成功，我们将及时为您处理</p>
 			<div id="qrcode"></div>
-			<p class="message">完成支付后，你可以 <a href="">查看订单状态</a>  <a href="">继续购物</a> <a href="">问题反馈</a></p>
+			<p class="message">完成支付后，你可以 <a href="" @click.prevent="payQueryFn">查看订单状态</a>  <a href="">继续购物</a> <a href="">问题反馈</a></p>
 		</div>
 	</div>
 	<!-- 主体部分 end -->
@@ -66,6 +66,7 @@ export default {
         Foot
     },
     methods:{
+        //查询订单的URl地址
         async getWxUrl(sn){
             let {data} = await this.$request.payUrl(this.sn);
             console.warn(data);
@@ -77,6 +78,15 @@ export default {
                 qrcode.makeCode(data.other.wxurl);
             }else{
                 alert("重新获取");
+            }
+        },
+        //查询订单状态
+        async payQueryFn(){
+            let {data} = await this.$request.payQuery(this.sn);
+            if(data.code == 1){
+                location.href = 'flow4'
+            }else{
+                alert(data.message);
             }
         }
     },

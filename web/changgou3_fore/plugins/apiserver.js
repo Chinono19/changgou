@@ -73,6 +73,9 @@ const request = {
      // 获得微信支付路径
      payUrl: ( sn ) => {
         return axios.post('/cgpayservice/pay/payUrl', { sn })
+     },
+     payQuery:(sn)=>{
+         return axios.get('/cgpayservice/pay/query/'+sn);
      }
 }
 
