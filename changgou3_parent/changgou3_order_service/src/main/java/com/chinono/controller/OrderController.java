@@ -41,6 +41,6 @@ public class OrderController {
 
         Long sn = orderService.addOrder(loginUser, orderVo);
 
-        return BaseResult.ok("下单成功").append("sn",sn);
+        return BaseResult.ok("下单成功").append("sn",sn+"");
     }
 }

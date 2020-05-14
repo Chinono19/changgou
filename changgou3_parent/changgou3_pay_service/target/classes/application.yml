@@ -6,6 +6,10 @@ server:
 spring:
   application:
     name: cgpayservice
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
 
 #注册中心
 eureka:

@@ -99,4 +99,14 @@ public class OrderService {
         //5 将订单的序列号返回
         return sn;
     }
+
+
+    /**
+     * 修改指定订单号的状态
+     * @param sn
+     * @param status
+     */
+    public void updateOrderStatus(String sn, String status) {
+        orderMapper.updateOrderStatus( sn , status );
+    }
 }

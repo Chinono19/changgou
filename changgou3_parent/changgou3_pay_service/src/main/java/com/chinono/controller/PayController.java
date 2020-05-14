@@ -7,6 +7,7 @@ import com.chinono.utils.BaseResult;
 import com.chinono.vo.PayRequest;
 import com.github.wxpay.sdk.WXPayUtil;
 import org.apache.commons.io.IOUtils;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.web.bind.annotation.*;
 import sun.nio.ch.IOUtil;
 
@@ -22,6 +23,9 @@ import java.util.Map;
 public class PayController {
     @Resource
     private PayService payService;
+
+    @Resource
+    private RabbitTemplate rabbitTemplate;
 
     @PostMapping("/payUrl")
     public BaseResult payUrl(@RequestBody PayRequest payRequest){
@@ -46,6 +50,8 @@ public class PayController {
             if("SUCCESS".equals(map.get("return_code"))){
                  sn = map.get("out_trade_no");
                 System.out.println(sn);
+                rabbitTemplate.convertAndSend("","order_pay",sn);
+                rabbitTemplate.convertAndSend("","order_pay_auto",sn);
                 //响应类型
                 response.setContentType("text/xml");
                 //响应内容
@@ -71,4 +77,5 @@ public class PayController {
             return BaseResult.error(payState.getDesc());
         }
     }
+
 }
